@@ -1,51 +1,69 @@
 body {
   margin: 0;
 }
-// .modal {
-//   position: relative;
-//   width: 100vw;
-//   height: 100vh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   .bg {
-//     position: absolute;
-//     z-index: 1;
-//     top: 0;
-//     left: 0;
-//     background-color: green;
-//     width: 100%;
-//     height: 100%;
-//   }
-//   .form {
-//     background-color: red;
-//     width: 400px;
-//     height: 500px;
-//     z-index: 2;
-//   }
-// }
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  // align-items: center;
+  .bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    background-color: black;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+  }
+  .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    max-width: 400px;
+    max-height: 600px;
+    z-index: 2;
+    overflow-y: auto;
+  }
+}
 
 .tab-list {
-  display: flex;
-  flex-wrap: wrap;
-
-  .tab-item {
-    width: 60px;
-    height: 60px;
+  .js-tab-item {
+    width: 600px;
+    height: 600px;
     background-color: red;
     margin: 30px;
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
+    // -webkit-filter: grayscale(100%);
+    // -moz-filter: grayscale(100%);
+    // -ms-filter: grayscale(100%);
+    // -o-filter: grayscale(100%);
+    // filter: grayscale(100%) !important;
+    border: 1px solid transparent;
+    padding: 0;
   }
 
-  .tab-item.active {
-    -webkit-filter: grayscale(0);
-    -moz-filter: grayscale(0);
-    -ms-filter: grayscale(0);
-    -o-filter: grayscale(0);
-    filter: grayscale(0);
+  .js-tab-item.active {
+    background-color: green;
+
+    // -webkit-filter: grayscale(0);
+    // -moz-filter: grayscale(0);
+    // -ms-filter: grayscale(0);
+    // -o-filter: grayscale(0);
+    // filter: grayscale(0);
   }
 }

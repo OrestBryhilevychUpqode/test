@@ -2,23 +2,52 @@ body {
   margin: 0;
 }
 
-.tab-list {
-  display: flex;
-  flex-wrap: wrap;
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
-.tab-list .tab-item {
-  width: 60px;
-  height: 60px;
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.modal .bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+.modal .form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  max-width: 400px;
+  max-height: 600px;
+  z-index: 2;
+  overflow-y: auto;
+}
+
+.tab-list .js-tab-item {
+  width: 600px;
+  height: 600px;
   background-color: red;
   margin: 30px;
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
+  border: 1px solid transparent;
+  padding: 0;
 }
-.tab-list .tab-item.active {
-  -moz-filter: grayscale(0);
-  -ms-filter: grayscale(0);
-  -o-filter: grayscale(0);
-  filter: grayscale(0);
+.tab-list .js-tab-item.active {
+  background-color: green;
 }/*# sourceMappingURL=test.css.map */

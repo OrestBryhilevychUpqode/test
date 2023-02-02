@@ -1,26 +1,33 @@
 ;(() => {
-  // const modal = document.querySelector(".modal")
-  // const bg = document.querySelector(".bg")
-  // const form = document.querySelector(".form")
-  // bg.addEventListener("click", () => {
-  //   console.log("bg")
-  //   modal.style.display = "none"
-  // })
-  // form.addEventListener("click", () => {
-  //   console.log("form")
-  // })
+  const modal = document.querySelector(".modal")
+  const bg = document.querySelector(".bg")
+  const form = document.querySelector(".form")
+  const html = document.querySelector("html")
 
-  const tabs = document.querySelectorAll(".tab-item")
+  bg.addEventListener("click", () => {
+    console.log("bg")
+    modal.style.display = "none"
+    html.classList.remove("no-scroll")
+  })
+
+  form.addEventListener("click", () => {
+    console.log("form")
+  })
+
+  const tabs = document.querySelectorAll(".js-tab-item")
 
   for (const tab of tabs) {
     tab.addEventListener("click", (e) => {
       removeActive()
       e.currentTarget.classList.add("active")
+      modal.style.display = "flex"
+      html.classList.add("no-scroll")
     })
   }
 
   function removeActive() {
-    for (const tab of tabs) {
+    const newTabs = document.querySelectorAll(".js-tab-item")
+    for (const tab of newTabs) {
       tab.classList.remove("active")
     }
   }
