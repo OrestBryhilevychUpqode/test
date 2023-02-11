@@ -8,20 +8,11 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <iframe
-      src="https://player.vimeo.com/video/795588475?background=1"
-      width="640"
-      height="360"
-      frameborder="0"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-    ></iframe>
-
     <div class="tab-list">
-      <div class="js-tab-item active"></div>
-      <div class="js-tab-item"></div>
-      <div class="js-tab-item"></div>
-      <div class="js-tab-item"></div>
+      <div class="js-tab-item active">button</div>
+      <div class="js-tab-item">button</div>
+      <div class="js-tab-item">button</div>
+      <div class="js-tab-item">button</div>
     </div>
 
     <div class="modal">
@@ -58,6 +49,43 @@
         eaque, iusto tempore ipsam ratione cum obcaecati eligendi nemo.
       </div>
     </div>
+
+    <a class="slp-button" href="#">
+      <span>SCHEDULE A 1:1 </span>
+    </a>
+
+    <h1>Image Fill</h1>
+
+    <svg
+      id="image-fill"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      width="100%"
+      height="300"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <pattern
+          id="image-bg"
+          x="0"
+          y="0"
+          height="246"
+          width="42"
+          patternUnits="userSpaceOnUse"
+        >
+          <image
+            width="246"
+            height="42"
+            xlink:href="http://placekitten.com/306/306"
+          />
+        </pattern>
+      </defs>
+      <polygon
+        class="hex"
+        points="5,0 100,0 100,75 95,100 0,100 0,25"
+        fill="url('#image-bg')"
+      />
+    </svg>
 
     <script src="./js/test.js" type="module"></script>
   </body>
