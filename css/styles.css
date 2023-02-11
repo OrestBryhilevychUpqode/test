@@ -50,4 +50,11 @@ body {
 }
 .tab-list .js-tab-item.active {
   background-color: green;
+  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 100%, 0 15%);
+          clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 100%, 0 15%);
+  background: linear-gradient(113.06deg, rgba(0, 80, 145, 0.707723) 0%, rgba(1, 203, 204, 0.9) 65.7%, rgba(0, 233, 222, 0.9) 100.17%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 2px;
 }/*# sourceMappingURL=styles.css.map */

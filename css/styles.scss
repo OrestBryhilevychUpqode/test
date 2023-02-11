@@ -60,6 +60,26 @@ body {
 
   .js-tab-item.active {
     background-color: green;
+    clip-path: polygon(
+      15% 0,
+      100% 0,
+      100% 85%,
+      85% 100%,
+      0 100%,
+      0 100%,
+      0 15%
+    );
+    // clip-path: polygon(0 0, 91% 0, 100% 10%, 100% 100%, 10% 100%, 0 91%);
+    background: linear-gradient(
+      113.06deg,
+      rgba(0, 80, 145, 0.707723) 0%,
+      rgba(1, 203, 204, 0.9) 65.7%,
+      rgba(0, 233, 222, 0.9) 100.17%
+    );
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 2px;
 
     // -webkit-filter: grayscale(0);
     // -moz-filter: grayscale(0);
