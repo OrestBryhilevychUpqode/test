@@ -1,5 +1,7 @@
 @import "./button";
 @import "./btn-old";
+@import "./banner";
+@import "./banner-test";
 
 body {
   margin: 0;
@@ -30,6 +32,7 @@ body {
     width: 100%;
     height: 100%;
   }
+
   .form {
     position: absolute;
     top: 50%;
@@ -39,11 +42,27 @@ body {
     background-color: white;
     width: 80%;
     height: 80%;
+    border-radius: 12px;
 
     max-width: 400px;
     max-height: 600px;
     z-index: 2;
     overflow-y: auto;
+    // &::-webkit-scrollbar {
+    //   border-radius: 8px;
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //   border-radius: 8px;
+    //   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    //   background-color: #00e9e9;
+    // }
+
+    // &::-webkit-scrollbar-track {
+    //   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    //   border-top-right-radius: 8px;
+    //   border-bottom-right-radius: 8px;
+    //   background-color: transparent;
+    // }
   }
 }
 
