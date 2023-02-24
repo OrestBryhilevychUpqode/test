@@ -1,63 +1,79 @@
-@media screen and (min-width: 1024px) {
-    .header-alter {
-        background-color: #fff;
+// @media screen and (min-width: 1024px) {
+//     .header-alter {
+//         background-color: #fff;
 
-        .link-socials.transparent-navbar,
-        .navbar-button-white.header-section,
-        .navbar-search-icon {
-            background-image: linear-gradient(
-                180deg,
-                #e60050,
-                #e6007e 20%,
-                #b03a8b 101%
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 1;
+//         .link-socials.transparent-navbar,
+//         .navbar-button-white.header-section,
+//         .navbar-search-icon {
+//             background-image: linear-gradient(
+//                 180deg,
+//                 #e60050,
+//                 #e6007e 20%,
+//                 #b03a8b 101%
+//             );
+//             -webkit-background-clip: text;
+//             background-clip: text;
+//             -webkit-text-fill-color: transparent;
+//             opacity: 1;
 
-            &:hover {
-                opacity: 0.5 !important;
-            }
-        }
+//             &:hover {
+//                 opacity: 0.5 !important;
+//             }
+//         }
 
-        .nav-link-white.w-nav-link,
-        .nav-dropdown-toggle.w-dropdown-toggle
-            .nav-dropdown-icon.w-icon-dropdown-toggle,
-        .nav-dropdown-toggle.w-dropdown-toggle .nav-item-title {
-            color: #3c3c3b;
-        }
-        .navbar-button-white.header-section:hover {
-            border-color: #e6007e !important;
-            opacity: 1;
-        }
+//         .nav-link-white.w-nav-link,
+//         .nav-dropdown-toggle.w-dropdown-toggle
+//             .nav-dropdown-icon.w-icon-dropdown-toggle,
+//         .nav-dropdown-toggle.w-dropdown-toggle .nav-item-title {
+//             color: #3c3c3b;
+//         }
+//         .navbar-button-white.header-section:hover {
+//             border-color: #e6007e !important;
+//             opacity: 1;
+//         }
 
-        // ----hover
+//         // ----hover
 
-        .link-socials.transparent-navbar:hover,
-        .navbar-button-white.header-section:hover,
-        .navbar-search-icon:hover,
-        .nav-link-white.w-nav-link:hover,
-        .nav-dropdown-toggle.w-dropdown-toggle:hover
-            .nav-dropdown-icon.w-icon-dropdown-toggle,
-        .nav-dropdown-toggle.w-dropdown-toggle:hover .nav-item-title {
-            background-image: linear-gradient(
-                180deg,
-                #e60050,
-                #e6007e 20%,
-                #b03a8b 101%
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 1;
-        }
-        .navbar-button-white.header-section {
-            border-color: #3c3c3b;
-            &:hover {
-                border-color: #e6007e !important;
-                opacity: 1;
-            }
-        }
+//         .link-socials.transparent-navbar:hover,
+//         .navbar-button-white.header-section:hover,
+//         .navbar-search-icon:hover,
+//         .nav-link-white.w-nav-link:hover,
+//         .nav-dropdown-toggle.w-dropdown-toggle:hover
+//             .nav-dropdown-icon.w-icon-dropdown-toggle,
+//         .nav-dropdown-toggle.w-dropdown-toggle:hover .nav-item-title {
+//             background-image: linear-gradient(
+//                 180deg,
+//                 #e60050,
+//                 #e6007e 20%,
+//                 #b03a8b 101%
+//             );
+//             -webkit-background-clip: text;
+//             background-clip: text;
+//             -webkit-text-fill-color: transparent;
+//             opacity: 1;
+//         }
+//         .navbar-button-white.header-section {
+//             border-color: #3c3c3b;
+//             &:hover {
+//                 border-color: #e6007e !important;
+//                 opacity: 1;
+//             }
+//         }
+//     }
+// }
+
+.pl-iframe-wrap-bg {
+    background-color: blue;
+    pl-iframe-wrap {
+        background: white;
+        max-width: 540px;
+        width: calc(100% - 2px);
+        border-radius: 3px;
+        border: 1px solid rgb(219, 219, 219);
+        box-shadow: none;
+        display: block;
+        margin: 0px 0px 12px;
+        min-width: 326px;
+        padding: 0px;
     }
 }

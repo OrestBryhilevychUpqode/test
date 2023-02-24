@@ -1,47 +1,15 @@
-@media screen and (min-width: 1024px) {
-  .header-alter {
-    background-color: #fff;
-  }
-  .header-alter .link-socials.transparent-navbar,
-  .header-alter .navbar-button-white.header-section,
-  .header-alter .navbar-search-icon {
-    background-image: linear-gradient(180deg, #e60050, #e6007e 20%, #b03a8b 101%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-  }
-  .header-alter .link-socials.transparent-navbar:hover,
-  .header-alter .navbar-button-white.header-section:hover,
-  .header-alter .navbar-search-icon:hover {
-    opacity: 0.5 !important;
-  }
-  .header-alter .nav-link-white.w-nav-link,
-  .header-alter .nav-dropdown-toggle.w-dropdown-toggle .nav-dropdown-icon.w-icon-dropdown-toggle,
-  .header-alter .nav-dropdown-toggle.w-dropdown-toggle .nav-item-title {
-    color: #3c3c3b;
-  }
-  .header-alter .navbar-button-white.header-section:hover {
-    border-color: #e6007e !important;
-    opacity: 1;
-  }
-  .header-alter .link-socials.transparent-navbar:hover,
-  .header-alter .navbar-button-white.header-section:hover,
-  .header-alter .navbar-search-icon:hover,
-  .header-alter .nav-link-white.w-nav-link:hover,
-  .header-alter .nav-dropdown-toggle.w-dropdown-toggle:hover .nav-dropdown-icon.w-icon-dropdown-toggle,
-  .header-alter .nav-dropdown-toggle.w-dropdown-toggle:hover .nav-item-title {
-    background-image: linear-gradient(180deg, #e60050, #e6007e 20%, #b03a8b 101%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-  }
-  .header-alter .navbar-button-white.header-section {
-    border-color: #3c3c3b;
-  }
-  .header-alter .navbar-button-white.header-section:hover {
-    border-color: #e6007e !important;
-    opacity: 1;
-  }
+.pl-iframe-wrap-bg {
+  background-color: blue;
+}
+.pl-iframe-wrap-bg pl-iframe-wrap {
+  background: white;
+  max-width: 540px;
+  width: calc(100% - 2px);
+  border-radius: 3px;
+  border: 1px solid rgb(219, 219, 219);
+  box-shadow: none;
+  display: block;
+  margin: 0px 0px 12px;
+  min-width: 326px;
+  padding: 0px;
 }/*# sourceMappingURL=test.css.map */
