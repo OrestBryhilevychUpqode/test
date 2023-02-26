@@ -1,0 +1,39 @@
+html,
+.block-editor__container .editor-styles-wrapper {
+    --c-primary: #010d82;
+    --c-secondary: #0e1d71;
+    --c-secondary-dark: #081e44;
+    --c-secondary-dark-2: #111662;
+    --c-secondary-dark-3: #161f6e;
+    --c-secondary-dark-4: #293d71;
+    --c-secondary-dark-5: #1d4179;
+    --c-accent: #045f8a;
+    --c-accent-2: #2166b4;
+    --c-accent-3: #0194b7;
+    --c-accent-4: #1adfda;
+    --c-white: #ffffff;
+    -ca-white: 255, 255, 255;
+    --c-alter: #c80368;
+    --c-alter-2: #7c53da;
+    --c-bg-item-1: #f7fbfd;
+    --c-bg-item-2: #fdf7f8;
+    --c-bg-item-3: #fbf7fd;
+    --c-bg-item-4: #e4f1ff;
+    --c-light-grey: #f2f2f2;
+    --c-light-grey-2: #f6f6f6;
+    --c-light-grey-3: #c4c4c4;
+    --c-light-grey-4: #b4b4b4;
+    --c-grey: #7f7f7f;
+    --c-dark: #1b1b1b;
+    --ca-dark: 27, 27, 27;
+    --ca-grey: 127, 127, 127;
+    --ca-primary: 97, 30, 41;
+    --font-size: 18px;
+    --t-primary-font-family: 'Avenir Next', sans-serif;
+    --t-secondary-font-family: 'Lato', sans-serif;
+    --c-bg-h2: linear-gradient(0deg, #161f6e, #161f6e),
+        linear-gradient(238.48deg, #84f7ff -11.24%, #6ae0ff 6.2%, #276bd2 100%);
+    @media only screen and (max-width: 1024px) {
+        --font-size: 16px;
+    }
+}
