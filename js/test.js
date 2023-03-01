@@ -50,3 +50,92 @@
     // const input = document.querySelector("input[type='email']");
     // input.placeholder = 'Нужный текст';
 })();
+
+(function () {
+    // create a new Library instance and store it in a variable called "customBlogPosts"
+    var all = new FsLibrary('.blog-posts-list-all');
+    // run the loadmore Library component on your instance
+    all.loadmore({
+        button: '.load-more-button', // class of Webflow Pagination button
+        resetIx: true, // adds Webflow interactions to newly loaded items
+        loadAll: true, // loads ALL items in your collection load on the page. Required for pagination
+        paginate: {
+            enable: true,
+            itemsPerPage: 1,
+            insertPagination: '.pagination-container-all',
+        },
+        animation: {
+            enable: true,
+            duration: 0.3,
+            easing: 'ease',
+            effects: 'fade',
+        },
+    });
+})();
+
+// regulatory
+(function () {
+    // create a new Library instance and store it in a variable called "customBlogPosts"
+    var regulatory = new FsLibrary('.blog-posts-list-regulatory');
+    // run the loadmore Library component on your instance
+    regulatory.loadmore({
+        button: '.load-more-button-regulatory', // class of Webflow Pagination button
+        resetIx: true, // adds Webflow interactions to newly loaded items
+        loadAll: true, // loads ALL items in your collection load on the page. Required for pagination
+        paginate: {
+            enable: true,
+            itemsPerPage: 1,
+            insertPagination: '.pagination-container-regulatory',
+        },
+        animation: {
+            enable: true,
+            duration: 0.3,
+            easing: 'ease',
+            effects: 'fade',
+        },
+    });
+})();
+
+// paginUseCases
+function paginUseCases() {
+    // create a new Library instance and store it in a variable called "customBlogPosts"
+    var useCases = new FsLibrary('.blog-posts-list-use-cases');
+    // run the loadmore Library component on your instance
+    useCases.loadmore({
+        button: '.load-more-button-use-cases', // class of Webflow Pagination button
+        resetIx: true, // adds Webflow interactions to newly loaded items
+        loadAll: true, // loads ALL items in your collection load on the page. Required for pagination
+        paginate: {
+            enable: true,
+            itemsPerPage: 1,
+            insertPagination: '.pagination-container-use-cases',
+        },
+        animation: {
+            enable: true,
+            duration: 0.3,
+            easing: 'ease',
+            effects: 'fade',
+        },
+    });
+}
+
+paginUseCases();
+
+var us = new FsLibrary('.blog-posts-list-us');
+// run the loadmore Library component on your instance
+all.loadmore({
+    button: '.load-more-button-us', // class of Webflow Pagination button
+    resetIx: true, // adds Webflow interactions to newly loaded items
+    loadAll: true, // loads ALL items in your collection load on the page. Required for pagination
+    paginate: {
+        enable: true,
+        itemsPerPage: 1,
+        insertPagination: '.pagination-container-us',
+    },
+    animation: {
+        enable: true,
+        duration: 0.3,
+        easing: 'ease',
+        effects: 'fade',
+    },
+});

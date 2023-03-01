@@ -30,8 +30,6 @@
         refs.submitCTA = refs.formCTA.querySelector('input[type="submit"]');
         refs.submitCTA.classList.add('submit-contact-us');
         refs.submitCTA.id = 'slp-form-submit-cta';
-
-        console.log(refs);
     }
 
     function choicesInit() {

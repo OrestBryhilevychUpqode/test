@@ -2,11 +2,15 @@
 // @import "./btn-old";
 // @import "./banner";
 @import './banner-test';
+@import './aedifion';
 
-// body {
-//   margin: 0;
-//   background-color: gray;
-// }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
 
 // .no-scroll {
 //   overflow: hidden;

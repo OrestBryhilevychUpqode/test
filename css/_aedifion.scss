@@ -1,0 +1,96 @@
+.btn {
+    display: inline-block;
+    position: relative;
+    padding: 10px 12px;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+
+    span {
+        background: linear-gradient(
+            181.25deg,
+            #e60050 1.28%,
+            #e6007e 26.26%,
+            #b03a8b 99.18%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        box-sizing: border-box;
+        border: 2px solid;
+        border-width: 2px;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(
+            181.34deg,
+            #e60050 1.28%,
+            #e6007e 26.26%,
+            #b03a8b 99.18%
+        );
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        background: rgba(230, 0, 126, 0.1);
+    }
+}
+
+.btn-alter {
+    display: inline-block;
+    position: relative;
+    padding: 8px 12px;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    border: 2px solid #e6007e;
+    border-radius: 5px;
+
+    span {
+        background: linear-gradient(
+            181.25deg,
+            #e60050 1.28%,
+            #e6007e 26.26%,
+            #b03a8b 99.18%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &:hover {
+        background: rgba(230, 0, 126, 0.1);
+    }
+}
