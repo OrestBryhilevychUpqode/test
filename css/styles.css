@@ -181,6 +181,9 @@
   opacity: 1;
   background: rgba(230, 0, 126, 0.1);
 }
+.btn:focus::after {
+  background: rgba(229, 0, 125, 0.06);
+}
 
 .btn-alter {
   display: inline-block;
@@ -204,6 +207,9 @@
 }
 .btn-alter:hover {
   background: rgba(230, 0, 126, 0.1);
+}
+.btn-alter:focus {
+  background: rgba(229, 0, 125, 0.06);
 }
 
 * {

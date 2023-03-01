@@ -61,6 +61,9 @@
         opacity: 1;
         background: rgba(230, 0, 126, 0.1);
     }
+    &:focus::after {
+        background: rgba(229, 0, 125, 0.06);
+    }
 }
 
 .btn-alter {
@@ -92,5 +95,8 @@
 
     &:hover {
         background: rgba(230, 0, 126, 0.1);
+    }
+    &:focus {
+        background: rgba(229, 0, 125, 0.06);
     }
 }
