@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .aed-form-wrap {
   display: flex;
   justify-content: flex-end;
@@ -324,48 +323,74 @@
   background: rgba(229, 0, 125, 0.06);
 }
 
-.box {
-  width: 250px;
-  height: 100px;
-  background: transparent;
-  border: 5px solid transparent;
-  border-radius: 50%;
-  -o-border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
-     border-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
-  border-image-slice: 1;
-  color: white;
-}
-
-.box:hover {
-  background: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
-}
-
-.gradient-box {
-  display: flex;
+.aed-checkbox {
+  display: block;
   align-items: center;
-  width: 90%;
-  margin: auto;
-  max-width: 22em;
-  position: relative;
-  padding: 30% 2em;
-  box-sizing: border-box;
-  color: #fff;
-  background: #fff;
-  background-clip: padding-box; /* !importanté */
-  border: solid 5px transparent; /* !importanté */
-  border-radius: 1em;
+  margin-top: 10px;
 }
-.gradient-box:before {
+.aed-checkbox input {
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+.aed-checkbox label:before {
   content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.aed-checkbox label {
+  position: relative;
+  cursor: pointer;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+.aed-checkbox input:checked + label:after {
+  content: "";
+  display: block;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -5px; /* !importanté */
-  border-radius: inherit; /* !importanté */
-  background: linear-gradient(to right, red, orange);
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 13px;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.8516 0.648438C13.207 0.976562 13.207 1.55078 12.8516 1.87891L5.85156 8.87891C5.52344 9.23438 4.94922 9.23438 4.62109 8.87891L1.12109 5.37891C0.765625 5.05078 0.765625 4.47656 1.12109 4.14844C1.44922 3.79297 2.02344 3.79297 2.35156 4.14844L5.22266 7.01953L11.6211 0.648438C11.9492 0.292969 12.5234 0.292969 12.8516 0.648438Z' fill='url(%23paint0_linear_2302_1636)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_2302_1636' x1='5.64355' y1='-2' x2='5.33736' y2='12' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23E60050'/%3E%3Cstop offset='0.255208' stop-color='%23E6007E'/%3E%3Cstop offset='1' stop-color='%23B03A8B'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-disabled:hover:before {
+  opacity: 0.5 !important;
+}
+.btn-disabled:before {
+  opacity: 0.5 !important;
+}
+.btn-disabled input {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.btn-disabled input:hover {
+  opacity: 0.5;
 }
 
 * {
