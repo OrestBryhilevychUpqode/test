@@ -5,6 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>AEDIFION</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.css"
+            integrity="sha512-q+OxwGn5fQc6oIdj3NQgTVMgS9TCLksZp5DsdSEsZbGamjdN7yVAMah+R1DmHZykkHD5gI8imeuEfmkp7ZHZ3w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+        />
         <link rel="stylesheet" href="./css/styles.css" />
     </head>
     <body>
@@ -127,8 +142,10 @@ We recommend moving this block and the preceding CSS link to the HEAD of your HT
                 <div class="aed-checkbox">
                     <input type="checkbox" id="aed-checkbox" />
                     <label for="aed-checkbox"
-                        >By registering for our newsletter you agree to the data
-                        processing</label
+                        ><span>
+                            By registering for our newsletter you agree to the
+                            data processing
+                        </span></label
                     >
                 </div>
             </div>
@@ -218,6 +235,104 @@ We recommend moving this block and the preceding CSS link to the HEAD of your HT
             </li>
         </ul>
 
-        <script src="./js/aedifon.js" type="module"></script>
+        <div
+            style="
+                --swiper-navigation-color: #fff;
+                --swiper-pagination-color: #fff;
+            "
+            class="swiper mySwiper2"
+        >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="gallery">
+                        <a
+                            href="https://swiperjs.com/demos/images/nature-1.jpg"
+                        >
+                            <img
+                                src="https://swiperjs.com/demos/images/nature-1.jpg"
+                        /></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://swiperjs.com/demos/images/nature-10.jpg"
+                    />
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://swiperjs.com/demos/images/nature-10.jpg"
+                    />
+                </div>
+            </div>
+        </div>
+        <script
+            type="module"
+            src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"
+            integrity="sha512-QoopN2y0b53eP+J2BNc1ff4ImedQAt2xDdhLQkUzTCyfniKkUlHbhweoYxDhCY78Z5EnMtY5rLtjtTK0Yc9Jcw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+        <script type="module" src="./js/aedifon.js"></script>
     </body>
 </html>

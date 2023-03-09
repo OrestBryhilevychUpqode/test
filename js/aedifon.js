@@ -107,3 +107,40 @@ function addToolTip() {
 }
 
 addToolTip();
+
+// ------------------------
+var swiper = new Swiper('.mySwiper', {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+var swiper2 = new Swiper('.mySwiper2', {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+});
+
+const gallery = document.querySelector('.gallery');
+
+gallery.addEventListener('click', onGalleryItemsClick);
+
+function onGalleryItemsClick(e) {
+    const largeImageUrl = e.target.dataset.src;
+    const instance = basicLightbox.create(`
+    <img src="${largeImageUrl}" width="800" height="600">
+`);
+
+    instance.show();
+
+    document.addEventListener('keydown', e => {
+        if (e.code === 'Escape') {
+            instance.close(largeImageUrl);
+        }
+    });
+}

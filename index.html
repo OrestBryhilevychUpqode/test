@@ -5,6 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+        />
         <link rel="stylesheet" href="./css/choices.min.css" />
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="stylesheet" href="./css/test.css" />
@@ -35,6 +39,35 @@
             </div>
         </div>
 
+        <div class="gallery">
+            <a
+                href="https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825__340.jpg"
+            >
+                <img
+                    src="https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825__340.jpg"
+                    alt=""
+                />
+            </a>
+        </div>
+        <div class="swiper-slide gallery2">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <div class="js-open-popup">
+                <svg class"icon-popup"
+                    width="21"
+                    height="22"
+                    viewBox="0 0 21 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M6.375 0.5H1.125C0.46875 0.5 0 1.01562 0 1.625V6.875C0 7.53125 0.46875 8 1.125 8C1.73438 8 2.25 7.53125 2.25 6.875V2.75H6.375C6.98438 2.75 7.5 2.28125 7.5 1.625C7.5 1.01562 6.98438 0.5 6.375 0.5ZM19.875 0.5H14.625C13.9688 0.5 13.5 1.01562 13.5 1.625C13.5 2.28125 13.9688 2.75 14.625 2.75H18.75V6.875C18.75 7.53125 19.2188 8 19.875 8C20.4844 8 21 7.53125 21 6.875V1.625C21 1.01562 20.4844 0.5 19.875 0.5ZM6.375 19.25H2.25V15.125C2.25 14.5156 1.73438 14 1.125 14C0.46875 14 0 14.5156 0 15.125V20.375C0 21.0312 0.46875 21.5 1.125 21.5H6.375C6.98438 21.5 7.5 21.0312 7.5 20.375C7.5 19.7656 6.98438 19.25 6.375 19.25ZM19.875 14C19.2188 14 18.75 14.5156 18.75 15.125V19.25H14.625C13.9688 19.25 13.5 19.7656 13.5 20.375C13.5 21.0312 13.9688 21.5 14.625 21.5H19.875C20.4844 21.5 21 21.0312 21 20.375V15.125C21 14.5156 20.4844 14 19.875 14Z"
+                        fill="white"
+                    />
+                </svg>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
             integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
@@ -43,6 +76,8 @@
         ></script>
         <script type="module" src="./js/choices.min.js"></script>
         <script type="module" src="./js/test.js"></script>
+        {#
         <script type="module" src="./js/form.js"></script>
+        #}
     </body>
 </html>
