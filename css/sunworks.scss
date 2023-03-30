@@ -1,0 +1,29 @@
+.sungrow {
+    cursor: pointer;
+    // &:hover {
+    //     stroke: aqua;
+    // }
+}
+
+.sungrow-popup-wrap {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    &.isOpen {
+        display: block;
+    }
+
+    .sungrow-popup {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 100px;
+        background-color: green;
+    }
+}
