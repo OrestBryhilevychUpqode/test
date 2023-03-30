@@ -23,9 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const parent = submit.parentNode;
 
     parent.classList.add('btn-disabled');
-    console.log(checkbox);
-    console.log(submit);
-    console.log(parent);
 
     checkbox.addEventListener('click', validate);
     submit.addEventListener('click', () => {
@@ -43,13 +40,11 @@ window.addEventListener('DOMContentLoaded', () => {
 // --------------------
 
 const scroll = document.querySelector('.btn').getBoundingClientRect().top;
-console.log(scroll);
 
 window.addEventListener('scroll', () => {
     const scroll = document
         .querySelector('.aed-test')
         .getBoundingClientRect().top;
-    console.log(scroll);
 });
 
 // $(window).scroll(function () {
@@ -126,21 +121,79 @@ var swiper2 = new Swiper('.mySwiper2', {
     },
 });
 
-const gallery = document.querySelector('.gallery');
+// const gallery = document.querySelector('.gallery');
 
-gallery.addEventListener('click', onGalleryItemsClick);
+// gallery.addEventListener('click', onGalleryItemsClick);
 
-function onGalleryItemsClick(e) {
-    const largeImageUrl = e.target.dataset.src;
-    const instance = basicLightbox.create(`
-    <img src="${largeImageUrl}" width="800" height="600">
-`);
+// function onGalleryItemsClick(e) {
+//     const largeImageUrl = e.target.dataset.src;
+//     const instance = basicLightbox.create(`
+//     <img src="${largeImageUrl}" width="800" height="600">
+// `);
 
-    instance.show();
+//     instance.show();
 
-    document.addEventListener('keydown', e => {
-        if (e.code === 'Escape') {
-            instance.close(largeImageUrl);
+//     document.addEventListener('keydown', e => {
+//         if (e.code === 'Escape') {
+//             instance.close(largeImageUrl);
+//         }
+//     });
+// }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.querySelector('.js-remove-scroll-leo');
+    const closeBtn = document.querySelector('.js-add-scroll-leo');
+    const menuItems = document.querySelectorAll('.js-menu-leo .nav-link');
+
+    if (openBtn && closeBtn && menuItems.length !== 0) {
+        openBtn.addEventListener('click', () => {
+            addHidden();
+
+            $(document).mouseup(function (e) {
+                var elem = $('.js-menu-leo');
+                if (e.target != elem[0] && !elem.has(e.target).length) {
+                    removeHidden();
+                }
+            });
+        });
+
+        closeBtn.addEventListener('click', removeHidden);
+
+        for (const item of menuItems) {
+            item.addEventListener('click', removeHidden);
         }
-    });
+
+        function addHidden() {
+            document.querySelector('body').classList.add('over-hidden');
+        }
+
+        function removeHidden() {
+            document.querySelector('body').classList.remove('over-hidden');
+        }
+    }
+});
+
+// ---------------------------------
+// Плавний скрол
+
+$(document).on('click', '.js-pag-link', function (e) {
+    e.preventDefault();
+    var topFilter = $('.js-top-filter').offset().top;
+    var topScr = topFilter - 100;
+    $('body, html').animate({ scrollTop: topScr }, 800);
+});
+
+// ----------------
+
+const text = ' Привіт я  Вася';
+
+const newText = text.toLocaleLowerCase().split('');
+const newArrayText = [];
+
+for (const item of newText) {
+    if (item !== ' ') {
+        newArrayText.push(item);
+    }
 }
+console.log(newText);
+console.log(newArrayText.join(''));
