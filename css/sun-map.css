@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+.map-wrap {
+  background-color: royalblue;
+  position: relative;
+  width: 1000px;
+  height: 800px;
+}
+.map-wrap .map-contain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.map-wrap .map-contain img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.map-wrap .map-popup {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  background-color: red;
+}
+.map-wrap .map-popup.isOpen {
+  display: block;
+}
+
+svg.map-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+svg.map-svg path {
+  fill: transparent;
+}
+svg.map-svg path.isOpen {
+  fill: rgba(21, 216, 79, 0.1);
+}
+svg.map-svg path:hover {
+  cursor: pointer;
+  fill: rgba(21, 216, 79, 0.1);
+}
+
+.map-popup {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  background-color: red;
+}
+.map-popup.isOpen {
+  display: block;
+}/*# sourceMappingURL=sun-map.css.map */

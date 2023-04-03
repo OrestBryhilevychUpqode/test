@@ -48,3 +48,15 @@ function sungrowOpenPopup() {
         }
     });
 }
+
+const a = document.querySelector('.test2');
+
+const string = `${a.innerHTML}`;
+console.log(string.split('').length);
+console.log(string.split(''));
+
+const b = document.querySelector('.test');
+
+const string2 = `${b.innerHTML}`;
+console.log(string2.split('').length);
+
