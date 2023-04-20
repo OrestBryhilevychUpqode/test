@@ -1,0 +1,173 @@
+.form-media-trends-2022 {
+    max-width: 650px;
+    width: 100%;
+}
+.form-media-trends-2022 .hbspt-form form {
+    position: relative;
+    -moz-columns: 1;
+    columns: 1;
+    padding-bottom: 70px;
+}
+.form-media-trends-2022 .hbspt-form form .hs-error-msg,
+.form-media-trends-2022 .hbspt-form form .hs-error-msgs,
+.form-media-trends-2022 .hbspt-form form .hs-field-desc {
+    font-family: 'Franklin Gothic FS';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 10px 0 20px;
+}
+.form-media-trends-2022 .hbspt-form form .no-list.hs-error-msgs {
+    position: absolute;
+    bottom: -12px;
+    margin-bottom: 0;
+}
+.form-media-trends-2022 .hbspt-form form .hs-dependent-field,
+.form-media-trends-2022 .hbspt-form form .hs-form-field {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column-reverse;
+}
+.form-media-trends-2022 .hbspt-form form .hs_submit {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.form-media-trends-2022 .hbspt-form form .hs_submit input[type='submit'] {
+    margin-bottom: 0;
+}
+.form-media-trends-2022 .hbspt-form form .hs-error-msg,
+.form-media-trends-2022 .hbspt-form form .hs-error-msgs {
+    list-style-type: none;
+    color: #f69577;
+}
+.form-media-trends-2022 .hbspt-form form .hs-error-msg a,
+.form-media-trends-2022 .hbspt-form form .hs-error-msgs a {
+    position: relative;
+    z-index: 10;
+    color: #f69577;
+    background-color: #fff;
+}
+.form-media-trends-2022 .hbspt-form form .hs-fieldtype-file label {
+    font-family: 'Franklin Gothic Book';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+    .form-media-trends-2022 .hbspt-form form .hs-fieldtype-file label {
+        margin-bottom: 20px;
+    }
+}
+.form-media-trends-2022 .hbspt-form form .hs-fieldtype-file input {
+    margin-bottom: 8px;
+}
+.form-media-trends-2022 .hbspt-form form .hs-dependent-field {
+    flex-direction: column;
+}
+.form-media-trends-2022 .hbspt-form form .hs-dependent-field .hs-error-msg {
+    display: inline-block;
+}
+.form-media-trends-2022 .hbspt-form form .hs-dependent-field label {
+    display: none;
+}
+.form-media-trends-2022 .hbspt-form form .hs-form-field > label {
+    display: none;
+}
+.form-media-trends-2022
+    .hbspt-form
+    form
+    .hs-dependent-field
+    .hs-form-field:nth-child(2) {
+    margin-bottom: 0.5rem;
+}
+.form-media-trends-2022 .hbspt-form form input {
+    width: 100%;
+    font-family: 'Franklin Gothic Book';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #f4f7f5;
+    border: 1px solid #a1c9e2;
+    border-radius: 8px;
+    padding: 13px 20px;
+    margin-bottom: 26px;
+}
+.form-media-trends-2022 .hbspt-form form input[type='submit'] {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-family: 'Franklin Gothic Medium';
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1e293b;
+    background: #f69577;
+    padding: 17px 56px;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    @media screen and (max-width: 767px) {
+        padding: 17px 30px;
+    }
+}
+.form-media-trends-2022 .hbspt-form form input[type='submit']:focus,
+.form-media-trends-2022 .hbspt-form form input[type='submit']:focus-visible {
+    border-radius: 100px;
+}
+.form-media-trends-2022 .hbspt-form form input[type='submit']:hover {
+    border-radius: 100px;
+    background: #fdb8a2;
+}
+.form-media-trends-2022 .hbspt-form form input:focus,
+.form-media-trends-2022 .hbspt-form form input:focus-visible {
+    outline: 0;
+    border: 2px solid #00f;
+    border-radius: 8px;
+}
+.form-media-trends-2022 .hbspt-form form input::-moz-placeholder {
+    color: #000;
+}
+.form-media-trends-2022 .hbspt-form form input::placeholder {
+    color: #000;
+}
+.form-media-trends-2022 .hbspt-form form input[type='file'] {
+    border-style: dashed;
+}
+.form-media-trends-2022 .hbspt-form form ::file-selector-button,
+.form-media-trends-2022
+    .hbspt-form
+    form
+    input[type='file']::-webkit-file-upload-button,
+.form-media-trends-2022
+    .hbspt-form
+    form
+    input[type='file']::file-selector-button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #a1c9e2;
+    border: 1px solid #6f9cb8;
+    border-radius: 8px;
+    margin-right: 10px;
+    padding: 5px 12px 7px 9px;
+    cursor: pointer;
+}
+.form-media-trends-2022 .hbspt-form form .hs_error_rollup {
+    display: none !important;
+}
+.form-media-trends-2022 .hbspt-form .submitted-message p {
+    font-family: 'Franklin Gothic Book';
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    text-align: center;
+}

@@ -70,4 +70,10 @@ svg.map-svg path:hover {
 }
 .map-popup.isOpen {
   display: block;
+}
+
+.close {
+  cursor: pointer;
+  border: 1px solid black;
+  margin-top: 20px;
 }/*# sourceMappingURL=sun-map.css.map */

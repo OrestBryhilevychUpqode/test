@@ -174,3 +174,23 @@ function onGalleryItemsClick(e) {
         }
     });
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const fisrtName = document.querySelector(
+            '#firstname-fa51bfd4-2ff4-416c-9af7-9ace8c9629ed'
+        );
+        const lastName = document.querySelector(
+            '#lastname-fa51bfd4-2ff4-416c-9af7-9ace8c9629ed'
+        );
+        const email = document.querySelector(
+            '#email-fa51bfd4-2ff4-416c-9af7-9ace8c9629ed'
+        );
+
+        if (fisrtName && lastName && email) {
+            fisrtName.placeholder = 'First Name';
+            lastName.placeholder = 'Last Name';
+            email.placeholder = 'Email*';
+        }
+    }, 1000);
+});

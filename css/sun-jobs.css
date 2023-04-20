@@ -1,0 +1,124 @@
+.sun-careers {
+  background: #0e4d92;
+  z-index: 40;
+  box-shadow: 0px 22px 44px -10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 65px 100px;
+  max-width: 1140px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 991px) {
+  .sun-careers {
+    padding: 50px 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .sun-careers {
+    padding: 30px 15px;
+  }
+}
+.sun-careers__item {
+  font-family: Marsden w, sans-serif;
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  padding: 40px 0;
+  text-decoration: none;
+}
+.sun-careers__item a {
+  text-decoration: none;
+}
+
+.sun-careers__item:not(:last-of-type) {
+  border-bottom: 2px solid #f7f0e6;
+}
+
+@media only screen and (max-width: 767px) {
+  .sun-careers .sun-careers__item-btn {
+    font-size: 20px;
+  }
+  .sun-careers__item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.sun-careers__item:hover .sun-careers__item-heading {
+  color: #feb914;
+}
+
+.sun-careers__item-position {
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-right: 2px solid #feb914;
+  width: calc(100% - 290px);
+}
+
+@media only screen and (max-width: 767px) {
+  .sun-careers__item-position {
+    padding-right: 0;
+    border: none;
+    width: 100%;
+    align-items: center;
+  }
+}
+.sun-careers__item-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.sun-careers__item-heading {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.sun-careers__item-btn-wrap {
+  padding-left: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+  .sun-careers__item-btn-wrap {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+.sun-careers__item-btn {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.sun-careers__item-btn svg {
+  transition: all 0.4s;
+}
+
+.sun-careers__item-btn:hover {
+  color: #feb914;
+}
+.sun-careers__item-btn:hover svg {
+  transform: translateX(10px);
+}
+.sun-careers__item-btn:hover svg path {
+  fill: #feb914;
+  stroke: #feb914;
+}
+
+.sun-careers__item-btn svg {
+  max-width: 25px;
+}/*# sourceMappingURL=sun-jobs.css.map */
