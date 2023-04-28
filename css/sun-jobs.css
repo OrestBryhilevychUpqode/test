@@ -2,10 +2,7 @@
   background: #0e4d92;
   z-index: 40;
   box-shadow: 0px 22px 44px -10px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
   padding: 65px 100px;
-  max-width: 1140px;
-  margin: auto;
 }
 
 @media only screen and (max-width: 991px) {
@@ -34,6 +31,11 @@
 .sun-careers__item:not(:last-of-type) {
   border-bottom: 2px solid #f7f0e6;
 }
+@media only screen and (max-width: 767px) {
+  .sun-careers__item:not(:last-of-type) {
+    border-bottom: 2px solid #feb914;
+  }
+}
 
 @media only screen and (max-width: 767px) {
   .sun-careers .sun-careers__item-btn {
@@ -44,12 +46,8 @@
     text-align: center;
   }
 }
-.sun-careers__item:hover .sun-careers__item-heading {
-  color: #feb914;
-}
-
 .sun-careers__item-position {
-  padding-right: 15px;
+  padding-right: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -66,25 +64,51 @@
   }
 }
 .sun-careers__item-text {
-  font-weight: 400;
+  font-family: Marsden w, sans-serif;
   font-size: 20px;
-  line-height: 28px;
+  font-weight: 500;
+  line-height: 1.2em;
   color: #ffffff;
   margin-top: 20px;
 }
 
 .sun-careers__item-heading {
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 34px;
-  text-transform: uppercase;
+  font-family: Marsden w, sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2em;
+  text-transform: capitalize;
   color: #ffffff;
   margin-bottom: 20px;
   transition: all 0.3s ease;
 }
+@media only screen and (max-width: 767px) {
+  .sun-careers__item-heading {
+    font-size: 28px;
+  }
+}
+.sun-careers__item-heading:hover {
+  color: #feb914;
+}
+
+.sun-careers__item-heading-error {
+  width: 100%;
+  font-family: Marsden w, sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2em;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 767px) {
+  .sun-careers__item-heading-error {
+    font-size: 28px;
+  }
+}
 
 .sun-careers__item-btn-wrap {
-  padding-left: 100px;
+  padding-left: 80px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -94,31 +118,23 @@
   }
 }
 .sun-careers__item-btn {
+  color: #0e2454;
+  text-transform: none;
+  background-color: #feb914;
+  border: 1px solid #feb914;
+  border-radius: 30px;
+  justify-content: center;
+  padding: 22px 36px;
+  font-weight: 400;
+  transition: color 0.3s, background-color 0.3s;
   display: flex;
-  align-items: center;
-  gap: 17px;
-  white-space: nowrap;
-  font-weight: 900;
-  font-size: 22px;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-.sun-careers__item-btn svg {
-  transition: all 0.4s;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: capitalize;
 }
 
 .sun-careers__item-btn:hover {
-  color: #feb914;
-}
-.sun-careers__item-btn:hover svg {
-  transform: translateX(10px);
-}
-.sun-careers__item-btn:hover svg path {
-  fill: #feb914;
-  stroke: #feb914;
-}
-
-.sun-careers__item-btn svg {
-  max-width: 25px;
+  color: #0e2454;
+  background-color: #fff;
 }/*# sourceMappingURL=sun-jobs.css.map */
