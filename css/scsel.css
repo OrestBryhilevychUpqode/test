@@ -1,0 +1,240 @@
+.wrap {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+.wrap .left {
+  width: 30%;
+}
+
+.scsel-subscribe-form {
+  width: 100%;
+  max-width: 414px;
+}
+.scsel-subscribe-form .hbspt-form .submitted-message {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid green;
+  border-radius: 8px;
+}
+.scsel-subscribe-form .hbspt-form form {
+  position: relative;
+}
+.scsel-subscribe-form .hbspt-form form .hs-form-field > label {
+  display: none;
+}
+.scsel-subscribe-form .hbspt-form form .hs-form-field input.hs-input {
+  width: 100%;
+  padding: 15px 14px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid rgba(89, 97, 103, 0.3);
+  background-color: #fff;
+  outline: none !important;
+  color: #363341;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 156%;
+}
+.scsel-subscribe-form .hbspt-form form .hs-form-field input.hs-input::-moz-placeholder {
+  color: #363341;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 156%;
+}
+.scsel-subscribe-form .hbspt-form form .hs-form-field input.hs-input::placeholder {
+  color: #363341;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 156%;
+}
+.scsel-subscribe-form .hbspt-form form .hs-form-field input.hs-input:focus {
+  border: 1px solid #ee7623;
+}
+.scsel-subscribe-form .hbspt-form form .hs-submit {
+  position: absolute;
+  top: 15px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.scsel-subscribe-form .hbspt-form form .hs-submit .actions {
+  position: relative;
+}
+.scsel-subscribe-form .hbspt-form form .hs-submit .actions:hover::before {
+  opacity: 0;
+}
+.scsel-subscribe-form .hbspt-form form .hs-submit .actions:hover::after {
+  opacity: 1;
+}
+.scsel-subscribe-form .hbspt-form form .hs-submit .actions input[type=submit] {
+  opacity: 0;
+}
+.scsel-subscribe-form .hbspt-form form .hs-submit .actions::before, .scsel-subscribe-form .hbspt-form form .hs-submit .actions::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.4s;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.scsel-subscribe-form .hbspt-form form .hs-submit .actions::before {
+  opacity: 1;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.1716 2.33039C22.0182 2.17706 21.8238 2.07132 21.6118 2.02591C21.3997 1.9805 21.179 1.99736 20.9763 2.07445L2.2249 9.1718H2.22115C2.00494 9.25495 1.81968 9.40282 1.69066 9.59521C1.56163 9.7876 1.49515 10.0151 1.50028 10.2467C1.5054 10.4783 1.5819 10.7027 1.71931 10.8892C1.85672 11.0756 2.04835 11.2152 2.26802 11.2887L2.28724 11.2948L8.72318 14.043C8.84871 14.0812 8.98204 14.0857 9.10986 14.0561C9.23768 14.0266 9.35552 13.9641 9.45162 13.8748L19.781 4.24992C19.8118 4.21914 19.8483 4.19473 19.8885 4.17807C19.9287 4.16142 19.9718 4.15284 20.0154 4.15284C20.0589 4.15284 20.102 4.16142 20.1422 4.17807C20.1824 4.19473 20.219 4.21914 20.2497 4.24992C20.2805 4.2807 20.3049 4.31724 20.3216 4.35746C20.3383 4.39767 20.3468 4.44077 20.3468 4.4843C20.3468 4.52783 20.3383 4.57093 20.3216 4.61114C20.3049 4.65136 20.2805 4.68789 20.2497 4.71867L10.6244 15.0434C10.5351 15.1395 10.4726 15.2573 10.4431 15.3851C10.4135 15.5129 10.418 15.6463 10.4561 15.7718L13.2054 22.2115C13.2082 22.2209 13.211 22.2293 13.2143 22.2382C13.3643 22.6727 13.744 22.9793 14.2029 22.9999H14.2497C14.4814 23.0012 14.7081 22.9328 14.9004 22.8036C15.0927 22.6744 15.2416 22.4903 15.3279 22.2752L22.4243 3.52899C22.5025 3.32615 22.5202 3.105 22.4754 2.89229C22.4305 2.67957 22.325 2.48441 22.1716 2.33039Z' fill='%23EE7623'/%3E%3C/svg%3E");
+}
+.scsel-subscribe-form .hbspt-form form .hs-submit .actions::after {
+  opacity: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.1716 2.33039C22.0182 2.17706 21.8238 2.07132 21.6118 2.02591C21.3997 1.9805 21.179 1.99736 20.9763 2.07445L2.2249 9.1718H2.22115C2.00494 9.25495 1.81968 9.40282 1.69066 9.59521C1.56163 9.7876 1.49515 10.0151 1.50028 10.2467C1.5054 10.4783 1.5819 10.7027 1.71931 10.8892C1.85672 11.0756 2.04835 11.2152 2.26802 11.2887L2.28724 11.2948L8.72318 14.043C8.84871 14.0812 8.98204 14.0857 9.10986 14.0561C9.23768 14.0266 9.35552 13.9641 9.45162 13.8748L19.781 4.24992C19.8118 4.21914 19.8483 4.19473 19.8885 4.17807C19.9287 4.16142 19.9718 4.15284 20.0154 4.15284C20.0589 4.15284 20.102 4.16142 20.1422 4.17807C20.1824 4.19473 20.219 4.21914 20.2497 4.24992C20.2805 4.2807 20.3049 4.31724 20.3216 4.35746C20.3383 4.39767 20.3468 4.44077 20.3468 4.4843C20.3468 4.52783 20.3383 4.57093 20.3216 4.61114C20.3049 4.65136 20.2805 4.68789 20.2497 4.71867L10.6244 15.0434C10.5351 15.1395 10.4726 15.2573 10.4431 15.3851C10.4135 15.5129 10.418 15.6463 10.4561 15.7718L13.2054 22.2115C13.2082 22.2209 13.211 22.2293 13.2143 22.2382C13.3643 22.6727 13.744 22.9793 14.2029 22.9999H14.2497C14.4814 23.0012 14.7081 22.9328 14.9004 22.8036C15.0927 22.6744 15.2416 22.4903 15.3279 22.2752L22.4243 3.52899C22.5025 3.32615 22.5202 3.105 22.4754 2.89229C22.4305 2.67957 22.325 2.48441 22.1716 2.33039Z' fill='%2300235a'/%3E%3C/svg%3E");
+}
+.scsel-subscribe-form .hbspt-form form ul.hs-error-msgs {
+  list-style: none;
+  padding: 0 14px;
+  margin: 10px 0;
+}
+.scsel-subscribe-form .hbspt-form form ul.hs-error-msgs label {
+  color: red;
+}
+
+.scsel-contact-form {
+  width: 100%;
+  max-width: 512px;
+}
+.scsel-contact-form .hbspt-form .submitted-message {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid green;
+  border-radius: 8px;
+}
+.scsel-contact-form .hbspt-form form fieldset {
+  margin: 0 0 24px 0;
+  max-width: 100%;
+}
+.scsel-contact-form .hbspt-form form fieldset.form-columns-1 .input, .scsel-contact-form .hbspt-form form fieldset.form-columns-2 .input {
+  margin-right: 0;
+}
+.scsel-contact-form .hbspt-form form fieldset.form-columns-2 {
+  display: grid;
+  grid-template-columns: calc(50% - 8px) calc(50% - 8px);
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+.scsel-contact-form .hbspt-form form .hs-form-field {
+  width: 100% !important;
+}
+.scsel-contact-form .hbspt-form form .hs-form-field > label {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.scsel-contact-form .hbspt-form form .hs-form-field input.hs-input,
+.scsel-contact-form .hbspt-form form .hs-form-field textarea.hs-input {
+  width: 100%;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid rgba(89, 97, 103, 0.3);
+  background-color: #fff;
+  outline: none !important;
+  color: #363341;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 156%;
+}
+.scsel-contact-form .hbspt-form form .hs-form-field input.hs-input::-moz-placeholder, .scsel-contact-form .hbspt-form form .hs-form-field textarea.hs-input::-moz-placeholder {
+  color: #596167;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 156%;
+}
+.scsel-contact-form .hbspt-form form .hs-form-field input.hs-input::placeholder,
+.scsel-contact-form .hbspt-form form .hs-form-field textarea.hs-input::placeholder {
+  color: #596167;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 156%;
+}
+.scsel-contact-form .hbspt-form form .hs-form-field input.hs-input:focus,
+.scsel-contact-form .hbspt-form form .hs-form-field textarea.hs-input:focus {
+  border: 1px solid #ee7623;
+}
+.scsel-contact-form .hbspt-form form .hs-form-field input.hs-input.invalid,
+.scsel-contact-form .hbspt-form form .hs-form-field textarea.hs-input.invalid {
+  border: 1px solid red;
+}
+.scsel-contact-form .hbspt-form form .hs-form-field textarea.hs-input {
+  padding: 12px 14px !important;
+  resize: none;
+  height: 130px;
+}
+.scsel-contact-form .hbspt-form form .hs-submit {
+  margin-top: 32px;
+}
+.scsel-contact-form .hbspt-form form .hs-submit .actions input[type=submit] {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 200px;
+  background-color: #ee7623;
+  color: #ffffff;
+  font-family: Archivo;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  transition: all 0.4s;
+}
+.scsel-contact-form .hbspt-form form .hs-submit .actions input[type=submit]:hover {
+  background-color: #00235a;
+}
+.scsel-contact-form .hbspt-form form fieldset .hs-form-required {
+  color: #ee7623;
+  margin-left: 3px;
+}
+.scsel-contact-form .hbspt-form form fieldset ul.hs-error-msgs {
+  text-align: left;
+  margin: 3px 0;
+}
+.scsel-contact-form .hbspt-form form ul.hs-error-msgs {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+}
+.scsel-contact-form .hbspt-form form ul.hs-error-msgs label {
+  color: red;
+}
+
+.swiper-slide ul li {
+  display: flex;
+  align-items: center;
+}
+.swiper-slide ul li::before {
+  margin-right: 15px;
+  display: block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.swiper-slide ul li p {
+  width: -moz-min-content;
+  width: min-content;
+  margin: 0;
+}/*# sourceMappingURL=scsel.css.map */
