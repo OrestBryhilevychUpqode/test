@@ -194,3 +194,24 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }, 1000);
 });
+
+// const closeBtns = document.querySelectorAll('.js-close-video');
+// const video = document.querySelector('.js-video iframe');
+
+// if (video) {
+//     let iframeSrc = video.src;
+//     video.src = iframeSrc;
+// }
+
+// $('.js-close-video').click(function () {
+//     console.log('click');
+//     if (video) {
+//         let iframeSrc = video.src;
+//         video.src = iframeSrc;
+//     }
+// });
+
+// // $('.js-video iframe')[0].contentWindow.postMessage(
+// //     '{"event":"command","func":"' + 'stopVideo' + '","args":""}',
+// //     '*'
+// // );
