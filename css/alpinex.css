@@ -1,0 +1,73 @@
+.alpinex-careers {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+}
+.alpinex-careers--item {
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(22, 44, 185, 0.2);
+  background: var(--white, #fff);
+  box-shadow: 0px 10px 26px 0px rgba(0, 12, 89, 0.09);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.alpinex-careers--item-title {
+  display: block;
+  margin-bottom: 12px;
+}
+.alpinex-careers--item-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  justify-content: start;
+}
+.alpinex-careers--item-info-team {
+  display: flex;
+  align-items: center;
+}
+.alpinex-careers--item-info-team svg {
+  margin-right: 10px;
+}
+.alpinex-careers--item-info-city {
+  display: flex;
+  align-items: center;
+}
+.alpinex-careers--item-info-city svg {
+  margin-right: 10px;
+}
+.alpinex-careers--item-info-btn {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.alpinex-careers--item-info-btn svg {
+  margin-left: 5px;
+}
+
+.contact-field-wrapper.js-dropdown {
+  position: relative;
+}
+.contact-field-wrapper.js-dropdown select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.contact-field-wrapper.js-dropdown::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  bottom: 16px;
+  right: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}/*# sourceMappingURL=alpinex.css.map */

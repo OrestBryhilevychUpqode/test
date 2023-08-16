@@ -111,3 +111,57 @@ function showSunPositions() {
     };
 }
 showSunPositions();
+
+// window.addEventListener('DOMContentLoaded', event => {
+//     const counters = document.querySelectorAll('.counter');
+//     const speed = 200;
+
+//     counters.forEach(counter => {
+//         const animate = () => {
+//             console.log(counter);
+//             const value = +counter.getAttribute('akhi');
+//             const data = +counter.innerText;
+
+//             const time = value / speed;
+//             if (data < value) {
+//                 counter.innerText = Math.ceil(data + time);
+//                 setTimeout(animate, 1);
+//             } else {
+//                 counter.innerText = value;
+//             }
+//         };
+
+//         animate();
+//     });
+// });
+
+var a = 0;
+$(window).scroll(function () {
+    var oTop = $('.counter-wrap').offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+        $('.counter').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('akhi');
+            $({
+                countNum: $this.text(),
+            }).animate(
+                {
+                    countNum: countTo,
+                },
+
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                        $this.text(this.countNum);
+                        //alert('finished');
+                    },
+                }
+            );
+        });
+        a = 1;
+    }
+});

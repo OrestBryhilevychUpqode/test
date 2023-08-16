@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Evanston</title>
+        <link
+            rel="stylesheet"
+            href="https://js.arcgis.com/4.27/esri/themes/dark/main.css"
+        />
+        <link rel="stylesheet" href="./css/evanston.css" />
+    </head>
+    <body>
+        <div class="embed-container">
+            <iframe
+                width="500"
+                height="400"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://evanston.maps.arcgis.com/apps/webappviewer/index.html?id=324428b4b69546d197dc17c24ece4152"
+            ></iframe>
+        </div>
+
+        <h1>Evanston map</h1>
+
+        <style>
+            html,
+            body,
+            #viewDiv {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #infoDiv {
+                padding: 10px;
+                width: 275px;
+            }
+            #sliderValue {
+                font-weight: bolder;
+            }
+            #legendDiv {
+                width: 260px;
+            }
+            #description {
+                padding: 10px 0 10px 0;
+            }
+        </style>
+
+        <div id="viewDiv"></div>
+        <div id="infoDiv" class="esri-widget">
+            <div id="description">
+                Show power plants with at least
+                <span id="sliderValue">0</span> megawatts of capacity
+            </div>
+            <div id="sliderContainer">
+                <div id="sliderDiv"></div>
+            </div>
+            <div id="legendDiv"></div>
+        </div>
+
+        <div class="map">
+            <div class="embed-container first">
+                <iframe
+                    width="500"
+                    height="400"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    title="Free Wi-Fi"
+                    src="https://evanston.maps.arcgis.com/home/item.html?id=324428b4b69546d197dc17c24ece4152"
+                ></iframe>
+            </div>
+        </div>
+
+        <script src="https://js.arcgis.com/4.27/"></script>
+        <script src="./js/evanston.js" type="module"></script>
+    </body>
+</html>
