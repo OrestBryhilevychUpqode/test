@@ -245,3 +245,47 @@ $(window).scroll(function () {
         a = 1;
     }
 });
+
+// ------------------------------------
+// var email = document.querySelector('input[type="email"]');
+// const messageWrap = document.querySelector('.form-field-wrap');
+
+// email.addEventListener(
+//     'input',
+//     function () {
+//         // Note: if (this.checkValidity()) won't work
+//         // as setCustomValidity('with a message') will set
+//         // the field as invalid.
+
+//         if (this.value.trim() === '') {
+//             messageWrap.classList.add('after-open');
+//         } else {
+//             messageWrap.classList.remove('after-open');
+//         }
+//     },
+//     false
+// );
+
+const validEmail = email => {
+    return email.match(
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+const validate = () => {
+    const messageWrap = document.querySelector('.form-field-wrap.email');
+    const email = $('.form-field-wrap.email input[type="email"]').val();
+
+    if (validEmail(email)) {
+        if (messageWrap) {
+            messageWrap.classList.remove('after-open');
+        }
+    } else {
+        if (messageWrap) {
+            messageWrap.classList.add('after-open');
+        }
+    }
+    return false;
+};
+
+$('.form-field-wrap.email input[type="email"]').on('input', validate);

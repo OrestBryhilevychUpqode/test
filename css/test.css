@@ -370,4 +370,21 @@ html,
 .hbspt-form-wrap .hs-field-desc,
 .hbspt-form-wrap .hs_error_rollup {
   display: none;
+}
+
+.form-field-wrap.email {
+  position: relative;
+}
+.form-field-wrap.email::after {
+  content: "Email not valid";
+  position: absolute;
+  display: none;
+  text-align: left;
+  left: 0;
+  top: 100%;
+  padding: 5px 0;
+  color: red;
+}
+.form-field-wrap.email.after-open::after {
+  display: block;
 }/*# sourceMappingURL=test.css.map */

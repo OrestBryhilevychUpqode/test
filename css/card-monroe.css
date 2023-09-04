@@ -1,0 +1,123 @@
+.new-form {
+  margin-top: 40px;
+}
+
+body {
+  background-color: rgba(192, 192, 211, 0.8);
+}
+
+.sal-form {
+  max-width: 700px;
+}
+.sal-form * {
+  box-sizing: border-box;
+}
+.sal-form form {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+  row-gap: 12px;
+  background-color: #f7f8fc;
+  padding: 40px;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  border-radius: 12px;
+  text-align: left;
+}
+.sal-form-btn-wrap {
+  padding-top: 24px;
+  text-align: center;
+}
+.sal-form-btn-close {
+  height: 36px;
+  color: #fff;
+  -webkit-text-fill-color: inherit;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-items: center;
+  font-family: Neuehaasdisplay Mediu, sans-serif;
+  font-weight: 500;
+  line-height: 1.2em;
+  text-decoration: none;
+  display: inline-flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  row-gap: 16px;
+}
+.sal-form-btn-close svg {
+  width: 14px;
+  height: 14px;
+}
+.sal-form-field {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(50% - 9px);
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .sal-form-field {
+    max-width: 100%;
+  }
+}
+.sal-form-field.last {
+  max-width: 100%;
+}
+.sal-form-field label,
+.sal-form-field p {
+  margin-bottom: 10px;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  display: block;
+}
+.sal-form-field input,
+.sal-form-field textarea,
+.sal-form-field select {
+  min-height: 50px;
+  color: #0e1d35;
+  background-color: #fff;
+  border: 1px solid rgba(192, 192, 211, 0.2);
+  border-radius: 6px;
+  margin-bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 18px;
+  font-size: 18px;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  resize: none;
+}
+.sal-form-field input.height-54,
+.sal-form-field textarea.height-54,
+.sal-form-field select.height-54 {
+  height: 54px;
+}
+.sal-form input[type=submit] {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 36px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #0e1d35;
+  border: 1px solid #0e1d35;
+  border-radius: 50px;
+  padding: 17px 25px;
+  font-family: Neuehaasdisplay Mediu, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1em;
+  transition: all 0.4s;
+  cursor: pointer;
+  display: inline-block;
+}
+.sal-form input[type=submit]:hover {
+  opacity: 1;
+  color: #0e1d35;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #0e1d35;
+}/*# sourceMappingURL=card-monroe.css.map */
