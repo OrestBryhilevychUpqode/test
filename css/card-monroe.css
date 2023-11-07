@@ -1,4 +1,5 @@
 .new-form {
+  background-color: black;
   margin-top: 40px;
 }
 
@@ -19,14 +20,13 @@ body {
        column-gap: 18px;
   row-gap: 12px;
   background-color: #f7f8fc;
-  padding: 40px;
+  padding: 20px 40px;
   border: 1px solid rgba(192, 192, 211, 0.2);
   border-radius: 12px;
   text-align: left;
 }
 .sal-form-btn-wrap {
-  padding-top: 24px;
-  text-align: center;
+  text-align: right;
 }
 .sal-form-btn-close {
   height: 36px;
@@ -68,37 +68,60 @@ body {
 }
 .sal-form-field label,
 .sal-form-field p {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-family: Lato, sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 12px;
   display: block;
 }
 .sal-form-field input,
 .sal-form-field textarea,
 .sal-form-field select {
-  min-height: 50px;
+  min-height: 36px;
   color: #0e1d35;
   background-color: #fff;
   border: 1px solid rgba(192, 192, 211, 0.2);
   border-radius: 6px;
   margin-bottom: 0;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 18px;
-  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   resize: none;
 }
 .sal-form-field input.height-54,
 .sal-form-field textarea.height-54,
 .sal-form-field select.height-54 {
-  height: 54px;
+  height: 36px;
+}
+.sal-form-field select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.sal-form .sal-form-field.select-wrap {
+  position: relative;
+}
+.sal-form .sal-form-field.select-wrap::after {
+  content: "";
+  display: block;
+  pointer-events: none;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='960px' height='560px' viewBox='0 0 960 560' enable-background='new 0 0 960 560' xml:space='preserve'%3E%3Cg id='Rounded_Rectangle_33_copy_4_1_'%3E%3Cpath d='M480,344.181L268.869,131.889c-15.756-15.859-41.3-15.859-57.054,0c-15.754,15.857-15.754,41.57,0,57.431l237.632,238.937 c8.395,8.451,19.562,12.254,30.553,11.698c10.993,0.556,22.159-3.247,30.555-11.698l237.631-238.937 c15.756-15.86,15.756-41.571,0-57.431s-41.299-15.859-57.051,0L480,344.181z'/%3E%3C/g%3E%3C/svg%3E");
 }
 .sal-form input[type=submit] {
   max-width: 100%;
   width: 100%;
-  margin-top: 36px;
+  margin-top: 14px;
   color: #fff;
   text-align: center;
   letter-spacing: 0.1em;
@@ -106,9 +129,9 @@ body {
   background-color: #0e1d35;
   border: 1px solid #0e1d35;
   border-radius: 50px;
-  padding: 17px 25px;
+  padding: 12px;
   font-family: Neuehaasdisplay Mediu, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1em;
   transition: all 0.4s;
