@@ -3,64 +3,96 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sinusoidal Progress Bar</title>
-        <style>
-            body {
-                margin: 0;
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-                background-color: #34495e;
-            }
-
-            .progress-bar {
-                width: 300px;
-                height: 20px;
-                background-color: #2c3e50;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .dot {
-                width: 20px;
-                height: 20px;
-                background-color: #fff;
-                border-radius: 50%;
-                position: absolute;
-                animation: moveSinusoidal 3s linear infinite;
-            }
-
-            @keyframes moveSinusoidal {
-                0%,
-                100% {
-                    transform: translateY(0);
-                }
-                50% {
-                    transform: translateY(-100px);
-                }
-            }
-        </style>
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="./css/progres-bar.css" />
     </head>
     <body>
-        <div class="progress-bar">
-            <div class="dot"></div>
+        <div class="progres-bar">
+            <div class="progres-bar--icons"></div>
+            <svg
+                class="road"
+                width="1337"
+                height="101"
+                viewBox="0 0 1337 101"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    id="path-test"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M581.17 37.0481C566.475 21.7216 541.998 21.6416 527.203 36.8718L483.924 81.4247C459.21 106.867 418.301 106.666 393.838 80.982L352.548 37.6324C337.77 22.1171 313.018 22.1171 298.24 37.6324L257.426 80.4834C232.739 106.402 191.371 106.333 166.77 80.333L126.9 38.195C112.048 22.4983 87.0383 22.5692 72.2757 38.3498L21.6284 92.4897C16.9122 97.5312 9.00201 97.7948 3.96055 93.0786C-1.08091 88.3624 -1.34455 80.4522 3.37168 75.4107L54.019 21.2708C78.6233 -5.03018 120.307 -5.14827 145.06 21.0128L184.93 63.1508C199.69 78.7507 224.511 78.7919 239.323 63.2411L280.138 20.39C304.768 -5.46882 346.02 -5.46876 370.651 20.3901L411.94 63.7397C426.618 79.1498 451.164 79.2704 465.992 64.0053L509.271 19.4524C533.929 -5.9313 574.724 -5.79805 599.216 19.7461L641.125 63.4565C655.954 78.9233 680.706 78.8414 695.433 63.2769L736.219 20.1699C760.598 -5.59615 801.51 -5.93126 826.308 19.432L869.971 64.0906C884.85 79.3086 909.397 79.1075 924.024 63.6479L964.571 20.7943C989.228 -5.26506 1030.71 -5.26509 1055.37 20.7943L1095.2 62.8949C1110.03 78.5665 1134.99 78.5248 1149.77 62.8038L1189.25 20.794C1213.76 -5.27668 1255.1 -5.49613 1279.88 20.3129L1333.52 76.1813C1338.3 81.1613 1338.14 89.0742 1333.16 93.8553C1328.18 98.6364 1320.26 98.4752 1315.48 93.4952L1261.85 37.6268C1246.98 22.1414 1222.17 22.2731 1207.47 37.9155L1167.99 79.9253C1143.36 106.127 1101.76 106.196 1077.04 80.077L1037.21 37.9765C1022.42 22.3409 997.525 22.3409 982.731 37.9765L942.184 80.8301C917.805 106.596 876.893 106.931 852.095 81.568L808.432 36.9093C793.553 21.6914 769.006 21.8925 754.379 37.3521L713.592 80.4591C689.048 106.4 647.795 106.536 623.079 80.7585L581.17 37.0481Z"
+                    fill="url(#paint0_linear_2816_8)"
+                />
+                <circle cx="98.5" cy="15" r="10" fill="#042449" />
+                <circle cx="325.5" cy="14" r="9" fill="#042449" />
+                <circle cx="554.5" cy="13" r="9" fill="#042449" />
+                <circle cx="782.5" cy="13" r="9" fill="#042449" />
+                <circle cx="1011.5" cy="13" r="9" fill="#042449" />
+                <circle cx="1237.5" cy="13" r="9" fill="#042449" />
+                <defs>
+                    <linearGradient
+                        id="paint0_linear_2816_8"
+                        x1="1402.22"
+                        y1="52.4631"
+                        x2="-65.2195"
+                        y2="52.4632"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stop-color="#6A82FF" />
+                        <stop offset="1" stop-color="#FF771B" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <svg
+                id="active-dot"
+                width="41"
+                height="40"
+                viewBox="0 0 41 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <circle cx="20.5" cy="20" r="20" fill="white" />
+                <circle cx="20.5" cy="20" r="10" fill="#042449" />
+            </svg>
         </div>
 
-        <script>
-            const progressBar = document.querySelector('.progress-bar');
-            const dot = document.querySelector('.dot');
+        <!-- Slider main container -->
+        <div class="swiper swiper-journey">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" data-pos="0.255">Slide 0</div>
+                <div class="swiper-slide" data-pos="0.34">Slide 1</div>
+                <div class="swiper-slide" data-pos="0.425">Slide 2</div>
+                <div class="swiper-slide" data-pos="0.51">Slide 3</div>
+                <div class="swiper-slide" data-pos="0.595">Slide 4</div>
+                <div class="swiper-slide" data-pos="0.68">Slide 5</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
-            function updateProgressBar() {
-                const progress =
-                    (dot.offsetTop /
-                        (progressBar.offsetHeight - dot.offsetHeight)) *
-                    100;
-                progressBar.style.background = `linear-gradient(90deg, #3498db ${progress}%, #2c3e50 ${progress}%)`;
-            }
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
-            dot.addEventListener('animationiteration', updateProgressBar);
-        </script>
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+            integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="./js/progres-bar.js"></script>
     </body>
 </html>

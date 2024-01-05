@@ -1,0 +1,16 @@
+body {
+  background-color: blue;
+}
+
+.swiper-slide {
+  height: 100px;
+  background-color: blanchedalmond;
+  text-align: center;
+}
+
+.progres-bar {
+  margin-top: 50px;
+}
+.progres-bar .road {
+  width: 100%;
+}/*# sourceMappingURL=progres-bar.css.map */
