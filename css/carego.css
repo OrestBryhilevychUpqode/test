@@ -1,0 +1,179 @@
+/* Most of these styles could be removed but are for the demo to look better */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-weight: 300;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: red;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#masthead {
+  position: fixed;
+  display: flex;
+  z-index: 9999;
+}
+
+#masthead a {
+  padding: 1rem 2rem;
+}
+
+#panels #panels-container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+#panels #panels-container .panel {
+  position: relative;
+  min-width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  color: #333;
+  text-align: left;
+  border-right: 1px solid #f00;
+}
+
+#panels #panels-container .panel img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#panels #panels-container .panel .panels-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#panels #panels-container .panel .anchor-panel,
+#panels #panels-container .panel .nav-panel {
+  color: #000;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+
+#panels #panels-container .panels-navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.cards-wrapper {
+  display: flex;
+}
+
+.card {
+  width: 600px;
+}
+
+#panel-5 {
+  width: unset;
+  flex: 1 0 auto;
+}
+
+.under-dot {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-wrap div:nth-child(1):hover ~ .under-dot {
+  transform: translateX(30px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.menu-wrap a:nth-child(2):hover ~ .under-dot {
+  transform: translateX(110px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.menu-wrap a:nth-child(3):hover ~ .under-dot {
+  transform: translateX(200px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.menu-wrap a:nth-child(4):hover ~ .under-dot {
+  transform: translateX(285px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1279px) {
+  .menu-wrap a:nth-child(2):hover ~ .under-dot {
+    transform: translateX(164px);
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  .menu-wrap a:nth-child(3):hover ~ .under-dot {
+    transform: translateX(280px);
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  .menu-wrap a:nth-child(4):hover ~ .under-dot {
+    transform: translateX(400px);
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  .menu-wrap a:nth-child(5):hover ~ .under-dot {
+    transform: translateX(522px);
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+section {
+  height: 100vh;
+  padding: 0 clamp(4rem, 12vw, 20rem);
+  display: grid;
+  place-content: center;
+}
+section p {
+  font-size: clamp(2rem, 5vw, 8rem);
+}
+section:nth-of-type(1) {
+  border-bottom: 1px solid black;
+}
+section:nth-of-type(3) {
+  background: #ffff00;
+}
+section:nth-of-type(4) {
+  background: rgb(29, 29, 29);
+  color: white;
+}/*# sourceMappingURL=carego.css.map */

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <style>
+            .swiper-container {
+                width: 80%;
+                margin: auto;
+            }
+
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                /* Додайте стилі для слайдів за вашим бажанням, наприклад, ширину */
+            }
+
+            .swiper-slide:nth-child(2n) {
+                background-color: red;
+            }
+            .swiper-slide:nth-child(2n-1) {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="width: 300px">Слайд 1</div>
+                <div class="swiper-slide" style="width: 400px">Слайд 2</div>
+                <div class="swiper-slide" style="width: 200px">Слайд 2</div>
+                <div class="swiper-slide" style="width: 500px">Слайд 2</div>
+                <div class="swiper-slide" style="width: 400px">Слайд 2</div>
+                <div class="swiper-slide" style="width: 500px">Слайд 3</div>
+                <!-- Додайте інші слайди з різною шириною за потреби -->
+            </div>
+            <!-- Додайте стрілки та навігацію за бажанням -->
+        </div>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    disableOnInteraction: false,
+                    delay: 2000,
+                },
+            });
+        </script>
+    </body>
+</html>
