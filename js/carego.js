@@ -1,6 +1,6 @@
 console.log('carego');
 
-// gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, SplitText);
 
 // --------------------
 // const paragraph = document.querySelector('.reveal-type');
@@ -97,69 +97,69 @@ console.log('carego');
 // gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 /* Main navigation */
-// let panelsSection = document.querySelector('#panels'),
-//     panelsContainer = document.querySelector('#panels-container'),
-//     tween;
-// document.querySelectorAll('.anchor').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         console.log('click');
-//         e.preventDefault();
-//         let targetElem = document.querySelector(e.target.getAttribute('href')),
-//             y = targetElem;
-//         if (
-//             targetElem &&
-//             panelsContainer.isSameNode(targetElem.parentElement)
-//         ) {
-//             let totalScroll =
-//                     tween.scrollTrigger.end - tween.scrollTrigger.start,
-//                 totalMovement = cont.scrollWidth - innerWidth;
-//             y = Math.round(
-//                 tween.scrollTrigger.start +
-//                     (targetElem.offsetLeft / totalMovement) * totalScroll
-//             );
-//         }
-//         gsap.to(window, {
-//             scrollTo: {
-//                 y: y,
-//                 autoKill: false,
-//             },
-//             duration: 1,
-//         });
-//     });
-// });
+let panelsSection = document.querySelector('#panels'),
+    panelsContainer = document.querySelector('#panels-container'),
+    tween;
+document.querySelectorAll('.anchor').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        console.log('click');
+        e.preventDefault();
+        let targetElem = document.querySelector(e.target.getAttribute('href')),
+            y = targetElem;
+        if (
+            targetElem &&
+            panelsContainer.isSameNode(targetElem.parentElement)
+        ) {
+            let totalScroll =
+                    tween.scrollTrigger.end - tween.scrollTrigger.start,
+                totalMovement = cont.scrollWidth - innerWidth;
+            y = Math.round(
+                tween.scrollTrigger.start +
+                    (targetElem.offsetLeft / totalMovement) * totalScroll
+            );
+        }
+        gsap.to(window, {
+            scrollTo: {
+                y: y,
+                autoKill: false,
+            },
+            duration: 1,
+        });
+    });
+});
 
-// const cont = document.querySelector('#feature-container');
-// const panels = gsap.utils.toArray('#feature-container .feature-slide');
+const cont = document.querySelector('#feature-container');
+const panels = gsap.utils.toArray('#feature-container .feature-slide');
 
 /* Panels */
 // const cont = document.querySelector('#panels-container');
 // const panels = gsap.utils.toArray('#panels-container .panel');
 
-// tween = gsap.to(panels, {
-//     x: () => -1 * (cont.scrollWidth - innerWidth),
-//     ease: 'none',
-//     scrollTrigger: {
-//         trigger: '#panels-container',
-//         pin: true,
-//         start: 'top top',
-//         scrub: 1,
-//         // end: () => '+=' + (cont.scrollWidth - innerWidth),
-//         end: () =>
-//             '+=' + document.querySelector('#panels-container').offsetWidth,
-//         onUpdate: self => {
-//             const slideIndex = Math.round(self.progress * (panels.length - 1));
-//             const slideId = panels[slideIndex].id;
-//             // console.log(panels[slideIndex]);
+tween = gsap.to(panels, {
+    x: () => -1 * (cont.scrollWidth - innerWidth),
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '#panels-container',
+        pin: true,
+        start: 'top top',
+        scrub: 1,
+        // end: () => '+=' + (cont.scrollWidth - innerWidth),
+        end: () =>
+            '+=' + document.querySelector('#panels-container').offsetWidth,
+        onUpdate: self => {
+            const slideIndex = Math.round(self.progress * (panels.length - 1));
+            const slideId = panels[slideIndex].id;
+            // console.log(panels[slideIndex]);
 
-//             // updateActiveNav(slideId);
-//         },
-//     },
-// });
+            // updateActiveNav(slideId);
+        },
+    },
+});
 
-// function updateActiveNav(slideId) {
-//     $('[data-slide-id]').removeClass('active');
-//     $(`[data-slide-id="${slideId}"]`).addClass('active');
-// }
+function updateActiveNav(slideId) {
+    $('[data-slide-id]').removeClass('active');
+    $(`[data-slide-id="${slideId}"]`).addClass('active');
+}
 
 /* Main navigation */
 // const panelsSection = document.querySelector('.js-feature-top');

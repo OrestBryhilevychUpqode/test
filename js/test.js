@@ -289,3 +289,23 @@ const validate = () => {
 };
 
 $('.form-field-wrap.email input[type="email"]').on('input', validate);
+
+// ----------------------------
+
+
+    const lenis = new Lenis({
+        lerp: 0.05,
+        wheelMultiplier: 1,
+        infinite: false,
+        gestureOrientation: 'vertical',
+        normalizeWheel: false,
+        smoothTouch: false,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+

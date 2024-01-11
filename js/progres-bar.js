@@ -1,4 +1,5 @@
 const icons = document.querySelectorAll('.js-icon-dot');
+let prevActiveSlide = '0';
 
 gsap.registerPlugin(MotionPathPlugin);
 
@@ -44,6 +45,7 @@ function gsapAnimation(start, stop) {
         });
     }
 }
+
 function iconsRemoveActive(array) {
     newArray = [...array];
 
@@ -66,7 +68,7 @@ function iconsUpdate(array, current) {
 
 // -------------
 const swiper = new Swiper('.swiper', {
-    loop: true,
+    // loop: true,
 
     pagination: {
         el: '.swiper-pagination',
@@ -90,9 +92,11 @@ swiper.on('slideChange', function (e) {
 
     setTimeout(() => {
         if (startIndex - stopIndex < 0) {
-            const start = document.querySelector(
-                `.swiper-journey .swiper-slide-prev`
-            ).dataset.pos;
+            // const start = document.querySelector(
+            //     `.swiper-journey .swiper-slide-prev`
+            // ).dataset.pos;
+            const start = document.querySelector(`[data-index='${startIndex}']`)
+                .dataset.pos;
             const stop = document.querySelector(
                 `.swiper-journey .swiper-slide-active`
             ).dataset.pos;
@@ -101,18 +105,30 @@ swiper.on('slideChange', function (e) {
         }
 
         if (startIndex - stopIndex > 0) {
-            const start = document.querySelector(
-                `.swiper-journey .swiper-slide-next`
-            ).dataset.pos;
+            // const start = document.querySelector(
+            //     `.swiper-journey .swiper-slide-next`
+            // ).dataset.pos;
+            const start = document.querySelector(`[data-index='${startIndex}']`)
+                .dataset.pos;
             const stop = document.querySelector(
                 `.swiper-journey .swiper-slide-active`
             ).dataset.pos;
 
             gsapAnimation(start, stop);
         }
+
+        prevActiveSlide = e.realIndex;
+        console.log(startIndex);
     }, 10);
 
     setTimeout(() => {
         iconsUpdate(icons, e.realIndex);
     }, 1010);
+});
+
+$('.js-icon-dot').click(function (e) {
+    const index = $(this).attr('data-id');
+    console.log(index);
+    // swiper.reInit();
+    swiper.slideTo(index);
 });
