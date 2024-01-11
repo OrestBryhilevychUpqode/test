@@ -1,3 +1,5 @@
+const icons = document.querySelectorAll('.js-icon-dot');
+
 gsap.registerPlugin(MotionPathPlugin);
 
 gsap.to('#active-dot', {
@@ -8,61 +10,73 @@ gsap.to('#active-dot', {
         align: '#path-test',
         alignOrigin: [0.5, 0.5],
         offsetY: 10,
-        start: 0.255,
-        end: 0.255,
+        start: 0.256,
+        end: 0.256,
     },
 });
 
-// $('.js-btn').on('click', function () {
-//     gsap.set('#active-dot', { xPercent: -100, yPercent: -0 });
-//     gsap.to('#active-dot', {
-//         duration: 1,
-//         ease: 'power1.inOut',
-
-//         motionPath: {
-//             path: '#path-test',
-//             align: 'self',
-//             // alignOrigin: [0.5, 0.5],
-//             start: 0.34,
-//             end: 0.255,
-//         },
-//     });
-// });
-
 function gsapAnimation(start, stop) {
-    gsap.to('#active-dot', {
-        duration: 1,
-        ease: 'power1.inOut',
-        motionPath: {
-            path: '#path-test',
-            align: '#path-test',
-            offsetY: 10,
-            // autoRotate: true,
-            alignOrigin: [0.5, 0.5],
-            // autoRotate: true,
-            start: start,
-            end: stop,
-        },
+    if (window.innerWidth > 1024) {
+        gsap.to('#active-dot', {
+            duration: 1,
+            ease: 'power1.inOut',
+            motionPath: {
+                path: '#path-test',
+                align: '#path-test',
+                offsetY: 10,
+                alignOrigin: [0.5, 0.5],
+                start: start,
+                end: stop,
+            },
+        });
+    } else if (window.innerWidth <= 1024) {
+        gsap.to('#active-dot', {
+            duration: 1,
+            ease: 'power1.inOut',
+            motionPath: {
+                path: '#path-test',
+                align: '#path-test',
+                offsetY: 10,
+                alignOrigin: [0.5, 1],
+                start: start,
+                end: stop,
+            },
+        });
+    }
+}
+function iconsRemoveActive(array) {
+    newArray = [...array];
+
+    newArray.map(item => {
+        item.classList.remove('active');
+    });
+}
+
+function iconsUpdate(array, current) {
+    newArray = [...array];
+
+    newArray.map(item => {
+        item.classList.remove('active');
+
+        if (item.dataset.id === current.toString()) {
+            item.classList.add('active');
+        }
     });
 }
 
 // -------------
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
     loop: true,
 
-    // If we need pagination
     pagination: {
         el: '.swiper-pagination',
     },
 
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 
-    // And if we need scrollbar
     scrollbar: {
         el: '.swiper-scrollbar',
     },
@@ -71,6 +85,9 @@ const swiper = new Swiper('.swiper', {
 swiper.on('slideChange', function (e) {
     const startIndex = e.previousIndex;
     const stopIndex = e.activeIndex;
+
+    iconsRemoveActive(icons);
+
     setTimeout(() => {
         if (startIndex - stopIndex < 0) {
             const start = document.querySelector(
@@ -79,8 +96,7 @@ swiper.on('slideChange', function (e) {
             const stop = document.querySelector(
                 `.swiper-journey .swiper-slide-active`
             ).dataset.pos;
-            console.log(start);
-            console.log(stop);
+
             gsapAnimation(start, stop);
         }
 
@@ -91,9 +107,12 @@ swiper.on('slideChange', function (e) {
             const stop = document.querySelector(
                 `.swiper-journey .swiper-slide-active`
             ).dataset.pos;
-            console.log(start);
-            console.log(stop);
+
             gsapAnimation(start, stop);
         }
     }, 10);
+
+    setTimeout(() => {
+        iconsUpdate(icons, e.realIndex);
+    }, 1010);
 });

@@ -194,4 +194,25 @@ section:nth-of-type(4) {
 
 .next-journey:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60' fill='none'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23FF771B'/%3E%3Cpath d='M31.364 20.353C31.1687 20.158 30.8524 20.158 30.6572 20.353L29.6 21.4091C29.4046 21.6043 29.4045 21.9209 29.5997 22.1162L35.3758 27.8966C35.6906 28.2116 35.4675 28.75 35.0221 28.75H21.5C21.2239 28.75 21 28.9739 21 29.25V30.75C21 31.0261 21.2239 31.25 21.5 31.25H35.0221C35.4675 31.25 35.6906 31.7884 35.3758 32.1034L29.5997 37.8838C29.4045 38.0791 29.4046 38.3957 29.6 38.5909L30.6572 39.647C30.8524 39.842 31.1687 39.842 31.364 39.647L40.6671 30.3537C40.8626 30.1584 40.8626 29.8416 40.6671 29.6463L31.364 20.353Z' fill='%23042449'/%3E%3C/svg%3E");
+}
+
+section {
+  background-color: #005096;
+}
+
+.split-lines {
+  text-align: center;
+  color: #fff;
+}
+.split-lines .line {
+  position: relative;
+}
+.split-lines .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #005096;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
 }/*# sourceMappingURL=carego.css.map */
