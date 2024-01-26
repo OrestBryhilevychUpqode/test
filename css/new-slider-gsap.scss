@@ -2,15 +2,15 @@ body {
     color: black;
 }
 .decor {
-    height: 500px;
+    height: 200vh;
     background-color: blue;
 }
-.hf-tabs-con {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 60px;
-    border: 1px solid red;
-}
+// .hf-tabs-con {
+//     display: flex;
+//     gap: 20px;
+//     margin-bottom: 60px;
+//     border: 1px solid red;
+// }
 
 .hf-tabs-content-wrap {
     position: relative;
@@ -31,7 +31,6 @@ body {
 //     top: 0;
 // }
 .headi {
-    height: 200px;
     background-color: aqua;
 }
 
@@ -39,24 +38,93 @@ body {
     // padding-bottom: 0 !important;
 }
 
-.js-feature-list {
-    position: relative;
-    // height: 100vh;
-}
-
-.js-feature-item {
-    // position: absolute;
+.js-feature-tabs {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: all 0.5s;
+    // position: relative;
+    // z-index: 2;
+    text-align: center;
+    gap: 20px;
+}
 
+.home-features-tabs-wrapper {
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: flex;
+    // -webkit-box-orient: horizontal;
+    // -webkit-box-direction: normal;
+    // -ms-flex-direction: row;
+    // flex-direction: row;
+    // position: absolute;
+    // bottom: 0;
+    // width: 100%;
+    // height: 75px;
+    // box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    // background: #fafafa;
+    // z-index: 2;
+    // -webkit-transition: all 0.3s;
+    // transition: all 0.3s;
+}
+
+.js-feature-list {
+    // position: relative;
+    // height: 100vh;
+}
+
+.active {
+    color: red;
+}
+
+// -----------------------------------
+
+.home-features-wrapper {
+    // position: relative;
+}
+
+.home-features-tabs-wrapper {
+    // position: sticky;
+    // top: 0;
+    // z-index: 9;
+}
+
+.home-features-tabs-wrapper.isFixed {
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 785px;
+    transition: translateY 0.5s;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+
+.js-feature-item {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    opacity: 0;
     &.isOpen {
         opacity: 1;
     }
 }
 
-.active {
-    color: red;
+.js-feature-tab-item {
+    cursor: pointer;
+}
+
+.js-feature-top {
+    padding: 100px 0;
+}
+
+@media screen and (max-width: 991px) {
+    .nav-menu .menu-wrap {
+        height: 100vh;
+    }
+    .nav-menu .menu-additional-info-wrap {
+        margin-top: auto;
+    }
 }

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            .home-features-wrapper {
+                padding: 200px 30px;
+                position: relative;
+            }
+
+            .home-features-tabs-wrapper {
+                position: sticky;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+
+            .hf-tabs-content-wrap {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .hf-tabs-content {
+                position: sticky;
+                top: 200px;
+                left: 0;
+                width: 100%;
+                opacity: 0;
+            }
+
+            .hf-tabs-content.active {
+                opacity: 1;
+            }
+
+            .js-feature-list:not(.animation-started) #slide-1 {
+                opacity: 1;
+            }
+
+            .js-feature-list.animation-active .hf-tabs-content {
+                height: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="decor"></div>
+        <div class="navbar"></div>
+        <div
+            class="home-features-wrapper inner-space stiky-tabs js-feature-top"
+        >
+            <div class="headi">
+                <p>INTRODUCTION TO TELIA</p>
+                <h1>
+                    The most sophisticated material handling platform ever
+                    developed
+                </h1>
+            </div>
+            <div class="home-features-wrapper">
+                <div class="home-features-tabs-wrapper">
+                    <div class="hf-tabs-con js-feature-tabs">
+                        <div
+                            data-slide-id="#slide-1"
+                            class="hf-tab-wrap active js-feature-tab-item"
+                        >
+                            <div>Safety</div>
+                        </div>
+
+                        <div
+                            data-slide-id="#slide-2"
+                            class="hf-tab-wrap js-feature-tab-item"
+                        >
+                            <div>Feature 02</div>
+                        </div>
+                        <div
+                            data-slide-id="#slide-3"
+                            class="hf-tab-wrap js-feature-tab-item"
+                        >
+                            <div>Feature 03</div>
+                        </div>
+                        <div
+                            data-slide-id="#slide-4"
+                            class="hf-tab-wrap js-feature-tab-item"
+                        >
+                            <div>Feature 04</div>
+                        </div>
+                        <div
+                            data-slide-id="#slide-5"
+                            class="hf-tab-wrap js-feature-tab-item"
+                        >
+                            <div>Feature 05</div>
+                        </div>
+                        <div
+                            data-slide-id="#slide-6"
+                            class="hf-tab-wrap js-feature-tab-item"
+                        >
+                            <div>Feature 06</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hf-tabs-content-wrap js-feature-list">
+                    <div
+                        id="slide-1"
+                        data-content-id="1"
+                        class="hf-tabs-content first js-feature-item isOpen active"
+                    >
+                        <div class="slider_wrapper">
+                            <div class="hf-tab-text-wrap">
+                                <div class="hf-tab-text-con">
+                                    <h4>Safety 1</h4>
+                                    <p>
+                                        It’s been at the forefront of our mind
+                                        since telia’s inception. After nearly 15
+                                        years after the first installation,
+                                        we’ve never had any harm befall a telia
+                                        user or facility. It’s been at the
+                                        forefront of our mind since telia’s
+                                        inception. After nearly 15 years after
+                                        the first installation, we’ve never had
+                                        any harm befall a telia user or
+                                        facility.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hf-tab-img-wrap">
+                                <img
+                                    src="https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png"
+                                    loading="lazy"
+                                    width="528"
+                                    height="280"
+                                    alt="illustration"
+                                    srcset="
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-500.png  500w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-800.png  800w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png       1056w
+                                    "
+                                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 52.0625px, (max-width: 1439px) 5vw, 6vw"
+                                    class="hf-tab-img"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="slide-2"
+                        data-content-id="1"
+                        class="hf-tabs-content first js-feature-item isOpen active"
+                    >
+                        <div class="slider_wrapper">
+                            <div class="hf-tab-text-wrap">
+                                <div class="hf-tab-text-con">
+                                    <h4>Safety 2</h4>
+                                    <p>
+                                        It’s been at the forefront of our mind
+                                        since telia’s inception. After nearly 15
+                                        years after the first installation,
+                                        we’ve never had any harm befall a telia
+                                        user or facility. It’s been at the
+                                        forefront of our mind since telia’s
+                                        inception. After nearly 15 years after
+                                        the first installation, we’ve never had
+                                        any harm befall a telia user or
+                                        facility.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hf-tab-img-wrap">
+                                <img
+                                    src="https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png"
+                                    loading="lazy"
+                                    width="528"
+                                    height="280"
+                                    alt="illustration"
+                                    srcset="
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-500.png  500w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-800.png  800w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png       1056w
+                                    "
+                                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 52.0625px, (max-width: 1439px) 5vw, 6vw"
+                                    class="hf-tab-img"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="slide-3"
+                        data-content-id="1"
+                        class="hf-tabs-content first js-feature-item isOpen active"
+                    >
+                        <div class="slider_wrapper">
+                            <div class="hf-tab-text-wrap">
+                                <div class="hf-tab-text-con">
+                                    <h4>Safety 3</h4>
+                                    <p>
+                                        It’s been at the forefront of our mind
+                                        since telia’s inception. After nearly 15
+                                        years after the first installation,
+                                        we’ve never had any harm befall a telia
+                                        user or facility. It’s been at the
+                                        forefront of our mind since telia’s
+                                        inception. After nearly 15 years after
+                                        the first installation, we’ve never had
+                                        any harm befall a telia user or
+                                        facility.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hf-tab-img-wrap">
+                                <img
+                                    src="https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png"
+                                    loading="lazy"
+                                    width="528"
+                                    height="280"
+                                    alt="illustration"
+                                    srcset="
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-500.png  500w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-800.png  800w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png       1056w
+                                    "
+                                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 52.0625px, (max-width: 1439px) 5vw, 6vw"
+                                    class="hf-tab-img"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="slide-4"
+                        data-content-id="1"
+                        class="hf-tabs-content first js-feature-item isOpen active"
+                    >
+                        <div class="slider_wrapper">
+                            <div class="hf-tab-text-wrap">
+                                <div class="hf-tab-text-con">
+                                    <h4>Safety 4</h4>
+                                    <p>
+                                        It’s been at the forefront of our mind
+                                        since telia’s inception. After nearly 15
+                                        years after the first installation,
+                                        we’ve never had any harm befall a telia
+                                        user or facility. It’s been at the
+                                        forefront of our mind since telia’s
+                                        inception. After nearly 15 years after
+                                        the first installation, we’ve never had
+                                        any harm befall a telia user or
+                                        facility.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hf-tab-img-wrap">
+                                <img
+                                    src="https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png"
+                                    loading="lazy"
+                                    width="528"
+                                    height="280"
+                                    alt="illustration"
+                                    srcset="
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-500.png  500w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-800.png  800w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png       1056w
+                                    "
+                                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 52.0625px, (max-width: 1439px) 5vw, 6vw"
+                                    class="hf-tab-img"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="slide-5"
+                        data-content-id="1"
+                        class="hf-tabs-content first js-feature-item isOpen active"
+                    >
+                        <div class="slider_wrapper">
+                            <div class="hf-tab-text-wrap">
+                                <div class="hf-tab-text-con">
+                                    <h4>Safety 5</h4>
+                                    <p>
+                                        It’s been at the forefront of our mind
+                                        since telia’s inception. After nearly 15
+                                        years after the first installation,
+                                        we’ve never had any harm befall a telia
+                                        user or facility. It’s been at the
+                                        forefront of our mind since telia’s
+                                        inception. After nearly 15 years after
+                                        the first installation, we’ve never had
+                                        any harm befall a telia user or
+                                        facility.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hf-tab-img-wrap">
+                                <img
+                                    src="https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png"
+                                    loading="lazy"
+                                    width="528"
+                                    height="280"
+                                    alt="illustration"
+                                    srcset="
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-500.png  500w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-800.png  800w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png       1056w
+                                    "
+                                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 52.0625px, (max-width: 1439px) 5vw, 6vw"
+                                    class="hf-tab-img"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="slide-6"
+                        data-content-id="1"
+                        class="hf-tabs-content first js-feature-item isOpen active"
+                    >
+                        <div class="slider_wrapper">
+                            <div class="hf-tab-text-wrap">
+                                <div class="hf-tab-text-con">
+                                    <h4>Safety 6</h4>
+                                    <p>
+                                        It’s been at the forefront of our mind
+                                        since telia’s inception. After nearly 15
+                                        years after the first installation,
+                                        we’ve never had any harm befall a telia
+                                        user or facility. It’s been at the
+                                        forefront of our mind since telia’s
+                                        inception. After nearly 15 years after
+                                        the first installation, we’ve never had
+                                        any harm befall a telia user or
+                                        facility.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hf-tab-img-wrap">
+                                <img
+                                    src="https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png"
+                                    loading="lazy"
+                                    width="528"
+                                    height="280"
+                                    alt="illustration"
+                                    srcset="
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-500.png  500w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety-p-800.png  800w,
+                                        https://assets-global.website-files.com/6583fd450604b720a7ad5f36/658a8420b0f537022d2fc319_safety.png       1056w
+                                    "
+                                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 52.0625px, (max-width: 1439px) 5vw, 6vw"
+                                    class="hf-tab-img"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="decor"></div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+            integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script>
+            $('.hf-tabs-content').each(function (index) {
+                $('.js-feature-list').append(
+                    "<div class='slide-duplicate' id='slide-" +
+                        index +
+                        "' style='height:" +
+                        $(this).outerHeight() +
+                        "px'></div>"
+                );
+            });
+
+            let wrapper = document.querySelector('.js-feature-list');
+            wrapper.classList.add('animation-active');
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var navItems = document.querySelectorAll('.slide-duplicate');
+
+                window.addEventListener('scroll', function () {
+                    var fromTop = window.scrollY - 200;
+
+                    if (wrapper.offsetTop <= fromTop) {
+                        wrapper.classList.add('animation-started');
+                    } else {
+                        wrapper.classList.remove('animation-started');
+                    }
+                });
+
+                function slidesAnimation() {
+                    var fromTop = window.scrollY - 200;
+                    navItems.forEach(function (item, index) {
+                        var slide =
+                            document.querySelectorAll('.hf-tabs-content')[
+                                index
+                            ];
+
+                        if (
+                            item.offsetTop <= fromTop &&
+                            item.offsetTop + item.offsetHeight > fromTop
+                        ) {
+                            item.classList.add('active');
+                            slide.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                            slide.classList.remove('active');
+                        }
+                    });
+                }
+
+                slidesAnimation();
+
+                window.addEventListener('scroll', function () {
+                    slidesAnimation();
+                });
+            });
+
+            $('.js-feature-tab-item').on('click', function (e) {
+                let id = $(this).attr('data-slide-id');
+
+                $('html, body').animate(
+                    {
+                        scrollTop: $(id).offset().top,
+                    },
+                    500
+                );
+            });
+        </script>
+    </body>
+</html>

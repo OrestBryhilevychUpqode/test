@@ -1,0 +1,16 @@
+* {
+    color: black;
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
+.swiper-slide {
+    transition: all 0.3s;
+}
+
+.swiper-slide-active {
+    color: blue;
+}
