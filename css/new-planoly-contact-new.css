@@ -44,6 +44,7 @@
   padding: 0;
   margin: -10px 0 20px;
   letter-spacing: 0.22px;
+  color: #000;
 }
 
 .white-form-wrapper .hbspt-form form .no-list.hs-error-msgs {
@@ -248,6 +249,7 @@
 .white-form-wrapper .hbspt-form form select::-moz-placeholder,
 .white-form-wrapper .hbspt-form form textarea::-moz-placeholder {
   color: #000;
+  opacity: 1;
 }
 
 .white-form-wrapper .hbspt-form form input::-moz-placeholder, .white-form-wrapper .hbspt-form form select::-moz-placeholder, .white-form-wrapper .hbspt-form form textarea::-moz-placeholder {
@@ -269,7 +271,7 @@
   font-weight: 500 !important;
   line-height: 120% !important; /* 14.4px */
   letter-spacing: 0.24px !important;
-  padding: 8px 10px !important;
+  padding: 8px 5px !important;
 }
 
 .white-form-wrapper .hbspt-form form ::file-selector-button,
@@ -282,7 +284,7 @@
   cursor: pointer;
   border-radius: 150px;
   border: 2px solid #c0c1ba;
-  background: #bbc25c;
+  background-color: #bbc25c;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -296,6 +298,7 @@
 }
 
 .hs_TICKET\.attachment > .input {
+  margin-bottom: 5px;
   border-radius: 10px;
   border: 2px solid #c0c1ba;
   background: #fff;
@@ -341,6 +344,13 @@
   min-height: 70px !important;
   border-radius: 10px !important;
   white-space: pre-line;
+  -moz-white-space: pre-line;
+  -ms-white-space: pre-line;
+}
+.hs_TICKET\.what_planning_space_are_you_using_ select option {
+  white-space: pre-line;
+  -moz-white-space: pre-line;
+  -ms-white-space: pre-line;
 }
 
 .hs_recaptcha {
@@ -353,4 +363,8 @@
   .hs_recaptcha {
     position: static !important;
   }
+}
+
+.white-form-wrapper .hbspt-form form .hs-email .no-list.hs-error-msgs a {
+  display: none;
 }/*# sourceMappingURL=new-planoly-contact-new.css.map */

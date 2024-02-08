@@ -44,11 +44,13 @@
     padding: 0;
     margin: -10px 0 20px;
     letter-spacing: 0.22px;
+    color: #000;
 }
 .white-form-wrapper .hbspt-form form .no-list.hs-error-msgs {
     position: absolute;
     margin-bottom: -15px;
 }
+
 .white-form-wrapper .hbspt-form form .hs-dependent-field,
 .white-form-wrapper .hbspt-form form .hs-form-field {
     position: relative;
@@ -258,7 +260,16 @@
 .white-form-wrapper .hbspt-form form select::-moz-placeholder,
 .white-form-wrapper .hbspt-form form textarea::-moz-placeholder {
     color: #000;
+    opacity: 1;
 }
+
+.white-form-wrapper .hbspt-form form input:-moz-placeholder,
+.white-form-wrapper .hbspt-form form select:-moz-placeholder,
+.white-form-wrapper .hbspt-form form textarea:-moz-placeholder {
+    color: #000;
+    opacity: 1;
+}
+
 .white-form-wrapper .hbspt-form form input::-ms-input-placeholder,
 .white-form-wrapper .hbspt-form form select::-ms-input-placeholder,
 .white-form-wrapper .hbspt-form form textarea::-ms-input-placeholder {
@@ -278,7 +289,7 @@
     font-weight: 500 !important;
     line-height: 120% !important; /* 14.4px */
     letter-spacing: 0.24px !important;
-    padding: 8px 10px !important;
+    padding: 8px 5px !important;
 }
 .white-form-wrapper .hbspt-form form ::file-selector-button,
 .white-form-wrapper
@@ -293,7 +304,7 @@
     cursor: pointer;
     border-radius: 150px;
     border: 2px solid #c0c1ba;
-    background: #bbc25c;
+    background-color: #bbc25c;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -301,15 +312,18 @@
     letter-spacing: 0.7px;
     text-transform: uppercase;
 }
+
 .white-form-wrapper .hbspt-form form .hs_error_rollup {
     display: none !important;
 }
 
 .hs_TICKET\.attachment {
     & > .input {
+        margin-bottom: 5px;
         border-radius: 10px;
         border: 2px solid #c0c1ba;
         background: #fff;
+
         input {
             margin-bottom: 0 !important;
         }
@@ -356,6 +370,14 @@
         min-height: 70px !important;
         border-radius: 10px !important;
         white-space: pre-line;
+        -moz-white-space: pre-line;
+        -ms-white-space: pre-line;
+    }
+
+    select option {
+        white-space: pre-line;
+        -moz-white-space: pre-line;
+        -ms-white-space: pre-line;
     }
 }
 
@@ -367,4 +389,8 @@
     @media screen and (max-width: 767px) {
         position: static !important;
     }
+}
+
+.white-form-wrapper .hbspt-form form .hs-email .no-list.hs-error-msgs a {
+    display: none;
 }
