@@ -134,6 +134,11 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M9 1.5L5 8.5L1 1.5' stroke='%23C0C1BA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
     background-repeat: no-repeat !important;
     background-position: center right 20px !important;
+    white-space: pre-line;
+    -moz-white-space: pre-line;
+    -ms-white-space: pre-line;
+    padding: 8px 30px 8px 20px !important;
+    text-overflow: ellipsis;
 }
 .white-form-wrapper
     .hbspt-form
@@ -361,6 +366,12 @@
     }
 
     .no-list.hs-error-msgs {
+        margin-bottom: 0px !important;
+    }
+}
+.hs_TICKET\.cancel_reason {
+    .no-list.hs-error-msgs.inputs-list {
+        bottom: -23px;
         margin-bottom: 0px !important;
     }
 }
