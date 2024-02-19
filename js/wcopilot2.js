@@ -1,6 +1,8 @@
 initMultiStepForm();
 
 function initMultiStepForm() {
+    let finishTotalHrs = 0;
+
     const slidePage = document.querySelector('.slide-page');
     const submitBtn = document.querySelector('.submit');
     const calculateBtn = document.querySelector('.js-calculate-btn');
@@ -39,8 +41,39 @@ function initMultiStepForm() {
         });
     }
 
-    calculateBtn.addEventListener('click', function () {
-        let totalHrs = 20;
+    calculateBtn.addEventListener('click', calculate);
+
+    submitBtn.addEventListener('click', function () {
+        current += 1;
+
+        $('.js-calc-result [data-package]').remove();
+        $(`[data-package="${finishTotalHrs - 5}hrs"]`)
+            .clone()
+            .appendTo('.js-calc-result');
+        $(`[data-package="${finishTotalHrs}hrs"]`)
+            .clone()
+            .appendTo('.js-calc-result');
+        $(`[data-package="${finishTotalHrs + 5}hrs"]`)
+            .clone()
+            .appendTo('.js-calc-result');
+
+        $('.js-calc-result [data-package]').css('display', 'flex');
+
+        $('html, body').animate(
+            {
+                scrollTop: $('.js-calc-result').offset().top - 120,
+            },
+            500
+        );
+    });
+
+    // add function
+    function calculate() {
+        let totalHrs = 0;
+
+        const valType = document.querySelector(
+            'input[name="type"]:checked'
+        ).value;
 
         const valInnerPages = document.querySelector(
             'input[name="inner-pages"]'
@@ -58,6 +91,38 @@ function initMultiStepForm() {
             'input[name="integration"]:checked'
         ).value;
 
+        // additional  functionality: online-bookings
+
+        const valEventsIntegrated =
+            document.querySelector('#events-integrated').checked;
+        const valCareersIntegrated = document.querySelector(
+            '#careers-integrated'
+        ).checked;
+        const valNewsletterIntegration = document.querySelector(
+            '#newsletter-integration'
+        ).checked;
+        const valLiveChatIntegration = document.querySelector(
+            '#livechat-integration'
+        ).checked;
+        const valOnlineBookings =
+            document.querySelector('#online-bookings').checked;
+        const valEcommerce = document.querySelector('#ecommerce').checked;
+        const valGoogleMap = document.querySelector('#google-map').checked;
+        const valAccessiBe = document.querySelector('#accessibe').checked;
+        const valWebflowSearch =
+            document.querySelector('#webflow-search').checked;
+        const valMultiLanguageManually = document.querySelector(
+            '#multi-language-manually'
+        ).checked;
+        const valMultiLanguageWeglot = document.querySelector(
+            '#multi-language-weglot'
+        ).checked;
+
+        // calc
+        if (valType === 'custom') {
+            totalHrs += 20;
+        }
+
         totalHrs += valInnerPages * 3;
 
         if (valBlog === 'yes') {
@@ -69,24 +134,53 @@ function initMultiStepForm() {
         if (valIntegration === 'yes') {
             totalHrs += 5;
         }
+        if (valEventsIntegrated) {
+            totalHrs += 10;
+        }
+        if (valCareersIntegrated) {
+            totalHrs += 5;
+        }
+        if (valNewsletterIntegration) {
+            totalHrs += 5;
+        }
+        if (valLiveChatIntegration) {
+            totalHrs += 0.5;
+        }
+        if (valOnlineBookings) {
+            totalHrs += 25;
+        }
+        if (valEcommerce) {
+            totalHrs += 5;
+        }
+        if (valGoogleMap) {
+            totalHrs += 4;
+        }
+        if (valAccessiBe) {
+            totalHrs += 1;
+        }
+        if (valWebflowSearch) {
+            totalHrs += 1;
+        }
+        if (valMultiLanguageManually) {
+            totalHrs += 0.5;
+        }
+        if (valMultiLanguageWeglot) {
+            totalHrs += 2.5;
+        }
 
-        console.log('valInnerPages:', valInnerPages);
-        console.log('valBlog:', valBlog);
-        console.log('valMigrate:', valMigrate);
-        console.log('valIntegration:', valIntegration);
+        const ceilTotalHrs = Math.ceil(totalHrs / 5) * 5;
+
+        if (ceilTotalHrs < 20) {
+            finishTotalHrs = 20;
+        } else if (ceilTotalHrs > 95) {
+            finishTotalHrs = 95;
+        } else {
+            finishTotalHrs = ceilTotalHrs;
+        }
+
         console.log('totalHrs:', totalHrs);
-    });
-
-    submitBtn.addEventListener('click', function () {
-        current += 1;
-        setTimeout(function () {
-            alert('Your Form Successfully Signed up');
-
-            location.reload();
-        }, 800);
-    });
-
-    // add function
+        console.log('finishTotalHrs:', finishTotalHrs);
+    }
 
     function validateInputs(ths) {
         let inputsValid = true;
