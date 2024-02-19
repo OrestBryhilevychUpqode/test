@@ -1,4 +1,3 @@
-/* Hubspot Form */
 * {
   box-sizing: border-box;
 }
@@ -78,12 +77,15 @@
   background: #ffc3ea;
   transition: all 0.3s;
 }
+
 .white-form-wrapper .hbspt-form form .hs_submit .actions:hover input[type=submit] {
   background-color: transparent;
 }
+
 .white-form-wrapper .hbspt-form form .hs_submit .actions:hover::after {
   opacity: 1;
 }
+
 .white-form-wrapper .hbspt-form form .hs_submit .actions::after {
   content: "";
   position: absolute;
@@ -257,6 +259,12 @@
   opacity: 1;
 }
 
+.white-form-wrapper .hbspt-form form input::-moz-placeholder,
+.white-form-wrapper .hbspt-form form select::-moz-placeholder,
+.white-form-wrapper .hbspt-form form textarea::-moz-placeholder {
+  color: #000;
+}
+
 .white-form-wrapper .hbspt-form form input::-moz-placeholder, .white-form-wrapper .hbspt-form form select::-moz-placeholder, .white-form-wrapper .hbspt-form form textarea::-moz-placeholder {
   color: #000;
 }
@@ -274,7 +282,7 @@
   font-size: 12px !important;
   font-style: normal !important;
   font-weight: 500 !important;
-  line-height: 120% !important; /* 14.4px */
+  line-height: 120% !important;
   letter-spacing: 0.24px !important;
   padding: 8px 5px !important;
 }
@@ -290,6 +298,7 @@
   border-radius: 150px;
   border: 2px solid #c0c1ba;
   background-color: #bbc25c;
+  font-family: "Saira", sans-serif !important;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -308,9 +317,11 @@
   border: 2px solid #c0c1ba;
   background: #fff;
 }
+
 .hs_TICKET\.attachment > .input input {
   margin-bottom: 0 !important;
 }
+
 .hs_TICKET\.attachment > label {
   font-weight: 400 !important;
   color: #000;
@@ -326,6 +337,7 @@
   bottom: 118px;
   left: 0;
 }
+
 @media screen and (max-width: 767px) {
   .hs_TICKET\.content {
     position: static !important;
@@ -341,6 +353,7 @@
 .hs_TICKET\.ticket_request_topic .no-list.hs-error-msgs.inputs-list {
   bottom: -15px;
 }
+
 .hs_TICKET\.ticket_request_topic .no-list.hs-error-msgs {
   margin-bottom: 0px !important;
 }
@@ -357,6 +370,7 @@
   -moz-white-space: pre-line;
   -ms-white-space: pre-line;
 }
+
 .hs_TICKET\.what_planning_space_are_you_using_ select option {
   white-space: pre-line;
   -moz-white-space: pre-line;
@@ -369,12 +383,12 @@
   right: 0;
   bottom: 62px;
 }
+
 @media screen and (max-width: 767px) {
   .hs_recaptcha {
     position: static !important;
   }
 }
-
 .white-form-wrapper .hbspt-form form .hs-email .no-list.hs-error-msgs a {
   display: none;
 }/*# sourceMappingURL=new-planoly-contact-new.css.map */

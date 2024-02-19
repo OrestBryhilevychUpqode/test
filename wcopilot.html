@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wcopilot</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css"
+            integrity="sha512-ExCGOC5ypU5hbvqvAtkFPtELKZVVoBGAXX+B1FOLQkfmizpF3HVfMrWNTkfsO4vLwWcwNij2tMFHpk3kgO8YHQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./css/wcopilot.css" />
+    </head>
+    <body>
+        <div class="conteiner-ranges">
+            <div class="start-ranges">15hrs. <span></span></div>
+            <div class="ranges">
+                <input
+                    id="orders-range"
+                    type="range"
+                    min="0"
+                    max="20"
+                    step="1"
+                    value="3"
+                />
+                <div class="rangeslider-points-wrapper"></div>
+            </div>
+            <div class="start-ranges"><span></span>100hrs.</div>
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+            integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"
+            integrity="sha512-mohHTcXX6T4txgOxP3SHzAtcCu1gTC3IgwgVudubQRuUA0btxBWAseqzl7ylf+56OjOYUgFXcN1jIyofTOJPLg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="./js/wcopilot.js"></script>
+    </body>
+</html>

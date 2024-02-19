@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/wcopilot2.css" />
+    </head>
+    <body>
+        <div class="container-form">
+            <div class="form-outer">
+                <div class="pf-form">
+                    <div class="page slide-page">
+                        <h3 class="title">
+                            Click to Calculate the Average Annual Cost
+                        </h3>
+                        <div class="field-wrap">
+                            <div class="field field-1">
+                                <input
+                                    type="radio"
+                                    name="type"
+                                    value="custom"
+                                    required
+                                    id="custom-yes"
+                                />
+                                <label class="label" for="custom-yes"
+                                    >Custom Made site</label
+                                >
+                            </div>
+                            <div class="field field-2">
+                                <input
+                                    type="radio"
+                                    name="type"
+                                    value="template"
+                                    required
+                                    id="custom-no"
+                                />
+                                <label for="custom-no" class="label"
+                                    >Template Based site</label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="btns-wrap">
+                            <div class="firstNext next">Next</div>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <h3 class="title">How many inner pages?</h3>
+                        <div class="field-wrap">
+                            <div class="field field-1">
+                                <input
+                                    type="number"
+                                    name="inner-pages"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="btns-wrap">
+                            <div class="prev-1 prev">Previous</div>
+                            <div class="next-1 next">Next</div>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <h3 class="title">Do you need a blog?</h3>
+                        <div class="field-wrap">
+                            <div class="field field-1">
+                                <input
+                                    type="radio"
+                                    name="blog"
+                                    value="yes"
+                                    required
+                                    id="blog-yes"
+                                />
+                                <label for="blog-yes" class="label">Yes</label>
+                            </div>
+                            <div class="field field-2">
+                                <input
+                                    type="radio"
+                                    name="blog"
+                                    value="no"
+                                    required
+                                    id="blog-no"
+                                />
+                                <label for="blog-no" class="label">No</label>
+                            </div>
+                        </div>
+
+                        <div class="btns-wrap">
+                            <div class="prev-2 prev">Previous</div>
+                            <div class="next-2 next">Next</div>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <h3 class="title">
+                            Do you need to migrate blog posts?
+                        </h3>
+                        <div class="field-wrap">
+                            <div class="field field-1">
+                                <input
+                                    type="radio"
+                                    name="migrate"
+                                    value="yes"
+                                    required
+                                    id="migrate-yes"
+                                />
+                                <label for="migrate-yes" class="label"
+                                    >Yes</label
+                                >
+                            </div>
+                            <div class="field field-2">
+                                <input
+                                    type="radio"
+                                    name="migrate"
+                                    value="no"
+                                    required
+                                    id="migrate-no"
+                                />
+                                <label for="migrate-no" class="label">No</label>
+                            </div>
+                        </div>
+
+                        <div class="btns-wrap">
+                            <div class="prev-3 prev">Previous</div>
+                            <div class="next-3 next">Next</div>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <h3 class="title">Do you need any integrations?</h3>
+                        <div class="sub-title">
+                            (CRM, Forms, Embeds, Youtube, Vimeo etc)
+                        </div>
+                        <div class="field-wrap">
+                            <div class="field field-1">
+                                <input
+                                    type="radio"
+                                    name="integration"
+                                    value="yes"
+                                    required
+                                    id="integration-yes"
+                                />
+                                <label for="integration-yes" class="label"
+                                    >Yes</label
+                                >
+                            </div>
+                            <div class="field field-2">
+                                <input
+                                    type="radio"
+                                    name="integration"
+                                    value="no"
+                                    required
+                                    id="integration-no"
+                                />
+                                <label for="integration-no" class="label"
+                                    >No</label
+                                >
+                            </div>
+                        </div>
+                        <div class="btns-wrap">
+                            <div class="prev-4 prev">Previous</div>
+                            <div class="next-4 next">Next</div>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <h3 class="title">
+                            Select additional needed functionality:
+                        </h3>
+
+                        <div class="field-wrap checkboxes">
+                            <div class="field-wrap--col-1">
+                                <div class="form-group">
+                                    <input
+                                        type="checkbox"
+                                        id="events-integrated"
+                                    />
+                                    <label for="events-integrated"
+                                        >Events integrated
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="checkbox"
+                                        id="careers-integrated"
+                                    />
+                                    <label for="careers-integrated"
+                                        >Careers Integrated</label
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="checkbox"
+                                        id="newsletter-integration"
+                                    />
+                                    <label for="newsletter-integration"
+                                        >Newsletter Integration</label
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="checkbox"
+                                        id="livechat-integration"
+                                    />
+                                    <label for="livechat-integration"
+                                        >LiveChat Integration</label
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="checkbox"
+                                        id="online-bookings"
+                                    />
+                                    <label for="online-bookings"
+                                        >Online Bookings</label
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="ecommerce" />
+                                    <label for="ecommerce">Ecommerce</label>
+                                </div>
+                            </div>
+                            <div class="field-wrap--col-2">
+                                <div class="form-group">
+                                    <input type="checkbox" id="google-map" />
+                                    <label for="google-map"
+                                        >Google Map Stylization</label
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="accessibe" />
+                                    <label for="accessibe"
+                                        >AccessiBe Tool</label
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="checkbox"
+                                        id="webflow-search"
+                                    />
+                                    <label for="webflow-search"
+                                        >Webflow Search
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="checkbox"
+                                        id="multi-language-manually"
+                                    />
+                                    <label for="multi-language-manually"
+                                        >Multi Language Functionality (per page)
+                                        manually</label
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <input
+                                        type="checkbox"
+                                        id="multi-language-weglot"
+                                    />
+                                    <label for="multi-language-weglot"
+                                        >Multi Language Functionality Weglot
+                                        Installation</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btns-wrap">
+                            <div
+                                class="next-5 next js-calculate-btn calculate-btn"
+                            >
+                                Calculate The Cost
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <h3 class="title">Form</h3>
+
+                        <div class="btns-wrap">
+                            <div class="submit">Close - Submit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+            integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="./js/wcopilot2.js"></script>
+    </body>
+</html>
