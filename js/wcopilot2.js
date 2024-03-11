@@ -67,6 +67,8 @@ function initMultiStepForm() {
         );
     });
 
+    // subit form
+
     // add function
     function calculate() {
         let totalHrs = 0;
@@ -117,6 +119,9 @@ function initMultiStepForm() {
         const valMultiLanguageWeglot = document.querySelector(
             '#multi-language-weglot'
         ).checked;
+        const valMembershipPortal =
+            document.querySelector('#membership-portal').checked;
+        const valLogo = document.querySelector('#logo').checked;
 
         // calc
         if (valType === 'custom') {
@@ -166,6 +171,12 @@ function initMultiStepForm() {
         }
         if (valMultiLanguageWeglot) {
             totalHrs += 2.5;
+        }
+        if (valMembershipPortal) {
+            totalHrs += 12;
+        }
+        if (valLogo) {
+            totalHrs += 10;
         }
 
         const ceilTotalHrs = Math.ceil(totalHrs / 5) * 5;
