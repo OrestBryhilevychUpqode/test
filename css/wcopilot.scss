@@ -3,20 +3,38 @@ body {
     margin: 0;
 }
 
+.pricing-item-clone {
+    width: 100%;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    border-radius: 6px;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: flex;
+    position: relative;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.07);
+}
+
+.pricing-item-content {
+    padding: 30px 15px 0 15px;
+}
+
 .conteiner-ranges {
     width: 100%;
-    max-width: 1200px;
+    max-width: calc(100% - 15px);
     margin: 0 auto;
     padding: 0 15px;
     position: relative;
-    margin-top: 94px;
+    margin-top: 36px;
     margin-bottom: 36px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-
     * {
         box-sizing: border-box;
     }
@@ -24,27 +42,13 @@ body {
 
 .ranges {
     display: block;
-    width: calc(100% - 240px);
     flex: none;
-    @media screen and (max-width: 767px) {
-        width: 100%;
-    }
+    width: 100%;
 }
 
 .start-ranges,
 .end-ranges {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--Blue-Dark, #0b1137);
-    font-family: 'Satoshi', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%; /* 18px */
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
+    display: none;
 
     span {
         width: 8px;
@@ -135,8 +139,8 @@ body {
 }
 .rangeslider--horizontal .rangeslider__handle {
     position: relative;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     box-shadow: none;
     border: none;
     border-radius: 50%;
@@ -163,12 +167,6 @@ body {
         background-color: #f69c2033;
     }
 }
-@media screen and (max-width: 767px) {
-    .rangeslider--horizontal .rangeslider__handle {
-        width: 20px;
-        height: 20px;
-    }
-}
 
 .rangeslider--horizontal .rangeslider__fill {
     background: #f69c20;
@@ -180,8 +178,7 @@ body {
 
 .rangeslider__oders {
     position: absolute;
-    padding: 8px 14px 12px 14px;
-    bottom: calc(100% + 48px);
+
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -190,7 +187,7 @@ body {
     color: #fff;
     color: #fff;
     font-family: 'Satoshi', sans-serif;
-    font-size: 20px;
+
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
@@ -210,19 +207,16 @@ body {
     }
 }
 
-@media screen and (max-width: 767px) {
-    .rangeslider__oders {
-        padding: 4px 8px;
-        bottom: calc(100% + 10px);
-        font-size: 12px;
-    }
+.rangeslider__oders {
+    padding: 4px 8px;
+    bottom: calc(100% + 10px);
+    font-size: 12px;
 }
 
-@media screen and (max-width: 767px) {
-    .rangeslider:before {
-        display: none;
-    }
+.rangeslider:before {
+    display: none;
 }
+
 .rangeslider__ruler:after {
     content: '';
     display: inline-block;

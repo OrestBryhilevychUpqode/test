@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,20 +14,23 @@
         <link rel="stylesheet" href="./css/wcopilot.css" />
     </head>
     <body>
-        <div class="conteiner-ranges">
-            <div class="start-ranges">15hrs. <span></span></div>
-            <div class="ranges">
-                <input
-                    id="orders-range"
-                    type="range"
-                    min="0"
-                    max="20"
-                    step="1"
-                    value="3"
-                />
-                <div class="rangeslider-points-wrapper"></div>
+        <div class="pricing-item-clone">
+            <div class="conteiner-ranges">
+                <div class="start-ranges">15hrs. <span></span></div>
+                <div class="ranges">
+                    <input
+                        id="orders-range"
+                        type="range"
+                        min="0"
+                        max="20"
+                        step="1"
+                        value="3"
+                    />
+                    <div class="rangeslider-points-wrapper"></div>
+                </div>
+                <div class="start-ranges"><span></span>100hrs.</div>
             </div>
-            <div class="start-ranges"><span></span>100hrs.</div>
+            <div class="pricing-item-content js-pricing-item-content"></div>
         </div>
 
         <script

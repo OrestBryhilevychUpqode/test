@@ -112,6 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
             $('[data-package]').css('display', 'none');
             $(packageSelector).css('display', 'flex');
 
+            //
+            $('.js-pricing-item-content').html('');
+            var htmlContent = $(packageSelector).html();
+            $('.js-pricing-item-content').html(htmlContent);
+            //
+
             if (val < 5) {
                 $('.rangeslider__point').css('background-color', '#eef0f5');
                 $('.rangeslider__point:nth-child(1)').css(
@@ -134,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     'background-color',
                     '#f69c20'
                 );
+
                 $('.rangeslider__point:nth-child(2)').css(
                     'background-color',
                     '#f69c20'

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chart.js</title>
+    </head>
+    <body>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            var popCanvas = document.getElementById('myChart');
+
+            Chart.defaults.font.family = 'Arial';
+            Chart.defaults.font.size = 28;
+            Chart.defaults.color = 'red';
+
+            var barChart = new Chart(popCanvas, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Al Revenue & Profit Growth',
+                        'Al Governance & Employee Safety',
+                        'Digital Transformation Initiatives',
+                        'Al Regulations & Compliance',
+                        'Strategic Partnerships',
+                        'Al Innovation + AIR&D',
+                        'Customer Satisfaction with Al',
+                        'Telent Acquisition & Retention',
+                        'Data-Driven Decision Making',
+                        'Al Operational Efficiency',
+                    ],
+                    datasets: [
+                        {
+                            label: 'Data',
+                            data: [
+                                1379302771, 1281935911, 326625791, 260580739,
+                                207353391, 204924861, 190632261, 157826578,
+                                142257519, 126451398,
+                            ],
+                            backgroundColor: ['#0080fe'],
+                        },
+                    ],
+                },
+                options: {
+                    indexAxis: 'y',
+                },
+            });
+        </script>
+    </body>
+</html>

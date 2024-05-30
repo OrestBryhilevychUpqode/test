@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chart.js</title>
+    </head>
+    <body>
+        <canvas id="myChart"></canvas>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            var popCanvas = document.getElementById('myChart');
+            Chart.defaults.font.family = 'Anton';
+            Chart.defaults.font.size = 16;
+            Chart.defaults.color = 'black';
+
+            var barChart = new Chart(popCanvas, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Al Revenue & Profit Growth',
+                        'Al Governance & Employee Safety',
+                        'Digital Transformation Initiatives',
+                        'Al Regulations & Compliance',
+                        'Strategic Partnerships',
+                        'Al Innovation + AIR&D',
+                        'Customer Satisfaction with Al',
+                        'Telent Acquisition & Retention',
+                        'Data-Driven Decision Making',
+                        'Al Operational Efficiency',
+                    ],
+                    datasets: [
+                        {
+                            label: 'Data',
+                            data: [
+                                93, 85, 80, 78, 76, 63, 48, 38, 35, 32, 20, 10,
+                                0,
+                            ],
+                            backgroundColor: ['#0080fe'],
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        tooltip: {
+                            enabled: false, // <-- this option disables tooltips
+                        },
+                        legend: {
+                            display: false,
+                        },
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>

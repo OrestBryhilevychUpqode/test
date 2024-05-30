@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fullscreen Video Example</title>
+        <style>
+            /* Розтягнути відео на весь екран */
+            body {
+                background-color: black;
+            }
+            .video-container {
+                position: relative;
+                width: 100%;
+                max-width: 1170px;
+                overflow: hidden;
+                border-radius: 0 95px 0 95px;
+            }
+
+            video {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+
+            /* Положення контролів відтворення */
+            .video-controls {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 10px;
+                border-radius: 5px;
+                color: #fff;
+            }
+
+            .video-controls button {
+                margin-right: 10px;
+                background-color: transparent;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .video-controls input[type='range'] {
+                width: 100px;
+                height: 6px;
+                appearance: none;
+                background: #ddd;
+                border-radius: 5px;
+                outline: none;
+                margin: 0 10px;
+            }
+
+            .video-controls input[type='range']::-webkit-slider-thumb {
+                appearance: none;
+                width: 10px;
+                height: 10px;
+                background: #fff;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="video-container">
+            <video id="myVideo" autoplay muted>
+                <source
+                    src="./video/Mid Size Business_ Murray-Brown Laboratories.mp4"
+                    type="video/mp4"
+                />
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-controls">
+                <button id="playPause">Pause</button>
+                <button id="mute">Unmute</button>
+                <span id="currentTime">0:00</span>/<span id="duration"
+                    >0:00</span
+                >
+            </div>
+        </div>
+
+        <script>
+            var video = document.getElementById('myVideo');
+            var playPauseButton = document.getElementById('playPause');
+            var muteButton = document.getElementById('mute');
+            var volumeRange = document.getElementById('volumeRange');
+            var seekRange = document.getElementById('seekRange');
+            var currentTimeDisplay = document.getElementById('currentTime');
+            var durationDisplay = document.getElementById('duration');
+
+            playPauseButton.addEventListener('click', function () {
+                if (video.paused) {
+                    video.play();
+                    playPauseButton.textContent = 'Pause';
+                } else {
+                    video.pause();
+                    playPauseButton.textContent = 'Play';
+                }
+            });
+
+            muteButton.addEventListener('click', function () {
+                if (video.muted) {
+                    video.muted = false;
+                    muteButton.textContent = 'Mute';
+                } else {
+                    video.muted = true;
+                    muteButton.textContent = 'Unmute';
+                }
+            });
+
+            volumeRange.addEventListener('input', function () {
+                video.volume = volumeRange.value;
+            });
+
+            seekRange.addEventListener('input', function () {
+                video.currentTime = seekRange.value * video.duration;
+            });
+
+            video.addEventListener('timeupdate', function () {
+                seekRange.value = video.currentTime / video.duration;
+                currentTimeDisplay.textContent = formatTime(video.currentTime);
+                durationDisplay.textContent = formatTime(video.duration);
+            });
+
+            function formatTime(seconds) {
+                var minutes = Math.floor(seconds / 60);
+                var remainingSeconds = Math.floor(seconds % 60);
+                return (
+                    minutes +
+                    ':' +
+                    (remainingSeconds < 10 ? '0' : '') +
+                    remainingSeconds
+                );
+            }
+        </script>
+    </body>
+</html>

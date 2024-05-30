@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- [Webflow Friendly Components by Francesco Castronuovo] GSAP Trail Image Effect -->
+        <script
+            async
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+        ></script>
+        <link
+            href="https://cdn.jsdelivr.net/gh/francesco-castronuovo/gsap-trail-image-effect@1.0.2/style.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script
+            async
+            src="https://cdn.jsdelivr.net/gh/francesco-castronuovo/gsap-trail-image-effect@1.0.2/main.js"
+        ></script>
+
+        <style>
+            .brand.now--black {
+             	color: #000;
+             }
+
+            .nav-text.white.now--black {
+             	color: #000;
+             }
+             .nav-text.white.now--black.w--current {
+             	border-color: #000;
+             }
+             .nav-text.white.now--black:hover {
+             	border-color: #000;
+             }
+
+             @media (max-width: 991px) {
+               .nav-menu-wrapper.v2.is--white {
+                 background-color: #fff;
+               }
+
+             .navigation .w-nav-overlay {
+             	top: 0 !important;
+             }
+        </style>
+
+        <!-- jQuery Waypoint -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+        <script>
+            var setWaypoints = function () {
+                // white background
+                $('.waypoint__white').waypoint(
+                    function (direction) {
+                        if (direction == 'down') {
+                            $('.brand').addClass('now--black');
+                            $('.nav-text.white').addClass('now--black');
+                            $('.nav-menu-wrapper.v2').addClass('is--white');
+                        } else {
+                            $('.brand').removeClass('now--black');
+                            $('.nav-text.white').removeClass('now--black');
+                            $('.nav-menu-wrapper.v2').removeClass('is--white');
+                        }
+                    },
+                    { offset: '10px' }
+                );
+
+                // black background
+                $('.waypoint__black').waypoint(
+                    function (direction) {
+                        if (direction == 'down') {
+                            $('.brand').removeClass('now--black');
+                            $('.nav-text.white').removeClass('now--black');
+                            $('.nav-menu-wrapper.v2').removeClass('is--white');
+                        } else {
+                            $('.brand').addClass('now--black');
+                            $('.nav-text.white').addClass('now--black');
+                            $('.nav-menu-wrapper.v2').addClass('is--white');
+                        }
+                    },
+                    { offset: '10px' }
+                );
+            };
+
+            setWaypoints();
+        </script>
+    </body>
+</html>
